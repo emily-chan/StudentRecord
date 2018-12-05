@@ -113,7 +113,6 @@
             this.comboLevel.Name = "comboLevel";
             this.comboLevel.Size = new System.Drawing.Size(121, 21);
             this.comboLevel.TabIndex = 7;
-            this.comboLevel.SelectedIndexChanged += new System.EventHandler(this.comboLevel_SelectedIndexChanged);
             // 
             // btnAddStudent
             // 

@@ -43,6 +43,10 @@
             this.btnFinish = new System.Windows.Forms.Button();
             this.btnGPA = new System.Windows.Forms.Button();
             this.lblGPA = new System.Windows.Forms.Label();
+            this.lblYear = new System.Windows.Forms.Label();
+            this.textBoxYear = new System.Windows.Forms.TextBox();
+            this.lblClassNumber = new System.Windows.Forms.Label();
+            this.textBoxNumber = new System.Windows.Forms.TextBox();
             this.tabControlClass.SuspendLayout();
             this.tabFall.SuspendLayout();
             this.tabSpring.SuspendLayout();
@@ -72,7 +76,7 @@
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(27, 65);
+            this.lblClass.Location = new System.Drawing.Point(27, 95);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(35, 13);
             this.lblClass.TabIndex = 2;
@@ -80,28 +84,30 @@
             // 
             // textboxClass
             // 
-            this.textboxClass.Location = new System.Drawing.Point(30, 81);
+            this.textboxClass.Location = new System.Drawing.Point(30, 111);
             this.textboxClass.Name = "textboxClass";
             this.textboxClass.Size = new System.Drawing.Size(121, 20);
             this.textboxClass.TabIndex = 3;
             // 
             // btnAddClass
             // 
-            this.btnAddClass.Location = new System.Drawing.Point(30, 122);
+            this.btnAddClass.Location = new System.Drawing.Point(30, 225);
             this.btnAddClass.Name = "btnAddClass";
             this.btnAddClass.Size = new System.Drawing.Size(75, 23);
             this.btnAddClass.TabIndex = 4;
             this.btnAddClass.Text = "Add Class";
             this.btnAddClass.UseVisualStyleBackColor = true;
+            this.btnAddClass.Click += new System.EventHandler(this.btnAddClass_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(30, 198);
+            this.button1.Location = new System.Drawing.Point(111, 225);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "Delete Class";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabControlClass
             // 
@@ -154,7 +160,7 @@
             // 
             // btnEditClass
             // 
-            this.btnEditClass.Location = new System.Drawing.Point(30, 159);
+            this.btnEditClass.Location = new System.Drawing.Point(30, 263);
             this.btnEditClass.Name = "btnEditClass";
             this.btnEditClass.Size = new System.Drawing.Size(75, 23);
             this.btnEditClass.TabIndex = 7;
@@ -163,7 +169,7 @@
             // 
             // btnFinish
             // 
-            this.btnFinish.Location = new System.Drawing.Point(30, 237);
+            this.btnFinish.Location = new System.Drawing.Point(111, 263);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(75, 23);
             this.btnFinish.TabIndex = 8;
@@ -172,7 +178,7 @@
             // 
             // btnGPA
             // 
-            this.btnGPA.Location = new System.Drawing.Point(30, 277);
+            this.btnGPA.Location = new System.Drawing.Point(30, 309);
             this.btnGPA.Name = "btnGPA";
             this.btnGPA.Size = new System.Drawing.Size(156, 23);
             this.btnGPA.TabIndex = 10;
@@ -187,11 +193,47 @@
             this.lblGPA.Size = new System.Drawing.Size(0, 13);
             this.lblGPA.TabIndex = 11;
             // 
+            // lblYear
+            // 
+            this.lblYear.AutoSize = true;
+            this.lblYear.Location = new System.Drawing.Point(27, 65);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(29, 13);
+            this.lblYear.TabIndex = 12;
+            this.lblYear.Text = "Year";
+            // 
+            // textBoxYear
+            // 
+            this.textBoxYear.Location = new System.Drawing.Point(62, 62);
+            this.textBoxYear.Name = "textBoxYear";
+            this.textBoxYear.Size = new System.Drawing.Size(57, 20);
+            this.textBoxYear.TabIndex = 13;
+            // 
+            // lblClassNumber
+            // 
+            this.lblClassNumber.AutoSize = true;
+            this.lblClassNumber.Location = new System.Drawing.Point(33, 152);
+            this.lblClassNumber.Name = "lblClassNumber";
+            this.lblClassNumber.Size = new System.Drawing.Size(72, 13);
+            this.lblClassNumber.TabIndex = 14;
+            this.lblClassNumber.Text = "Class Number";
+            // 
+            // textBoxNumber
+            // 
+            this.textBoxNumber.Location = new System.Drawing.Point(30, 178);
+            this.textBoxNumber.Name = "textBoxNumber";
+            this.textBoxNumber.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNumber.TabIndex = 15;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 355);
+            this.Controls.Add(this.textBoxNumber);
+            this.Controls.Add(this.lblClassNumber);
+            this.Controls.Add(this.textBoxYear);
+            this.Controls.Add(this.lblYear);
             this.Controls.Add(this.lblGPA);
             this.Controls.Add(this.btnGPA);
             this.Controls.Add(this.btnFinish);
@@ -230,5 +272,9 @@
         private System.Windows.Forms.Button btnFinish;
         private System.Windows.Forms.Button btnGPA;
         private System.Windows.Forms.Label lblGPA;
+        private System.Windows.Forms.Label lblYear;
+        private System.Windows.Forms.TextBox textBoxYear;
+        private System.Windows.Forms.Label lblClassNumber;
+        private System.Windows.Forms.TextBox textBoxNumber;
     }
 }

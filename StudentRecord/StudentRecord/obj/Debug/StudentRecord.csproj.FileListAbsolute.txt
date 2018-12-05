@@ -21,3 +21,4 @@ C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csproj.CoreCompileInputs.cache
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.exe
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.pdb
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form4.resources

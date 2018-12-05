@@ -90,19 +90,14 @@ namespace StudentRecord
 
             if (listBoxStudents.SelectedIndex > -1)
             {
-
-                Student student = students[listBoxStudents.SelectedIndex];//the first part before the equal sign is not right
+                //we need to figure out a way to link the student, with the term and class.... link everything together.
+                Student student = students[listBoxStudents.SelectedIndex];
                 Form2 f2 = new Form2();
                 f2.Show();
             }
         }
        
        
-        private void comboLevel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //allow the user to change the type of record from a dropdown menu
-            //tabControl.SelectTab(comboLevel.SelectedIndex);//this might have to be deleted
-        }
 
         private void btnEditStudent_Click(object sender, EventArgs e)
         {
