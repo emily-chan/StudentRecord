@@ -39,8 +39,8 @@
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnEditStudent = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.lblStudents = new System.Windows.Forms.Label();
+            this.listBoxStudents = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblFirst
@@ -113,6 +113,7 @@
             this.comboLevel.Name = "comboLevel";
             this.comboLevel.Size = new System.Drawing.Size(121, 21);
             this.comboLevel.TabIndex = 7;
+            this.comboLevel.SelectedIndexChanged += new System.EventHandler(this.comboLevel_SelectedIndexChanged);
             // 
             // btnAddStudent
             // 
@@ -122,6 +123,7 @@
             this.btnAddStudent.TabIndex = 8;
             this.btnAddStudent.Text = "Add Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnEditStudent
             // 
@@ -131,6 +133,7 @@
             this.btnEditStudent.TabIndex = 9;
             this.btnEditStudent.Text = "Edit Student";
             this.btnEditStudent.UseVisualStyleBackColor = true;
+            this.btnEditStudent.Click += new System.EventHandler(this.btnEditStudent_Click);
             // 
             // btnDeleteStudent
             // 
@@ -140,14 +143,7 @@
             this.btnDeleteStudent.TabIndex = 10;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(239, 29);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(153, 136);
-            this.listView1.TabIndex = 11;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // lblStudents
             // 
@@ -158,13 +154,22 @@
             this.lblStudents.TabIndex = 12;
             this.lblStudents.Text = "Students:";
             // 
+            // listBoxStudents
+            // 
+            this.listBoxStudents.FormattingEnabled = true;
+            this.listBoxStudents.Location = new System.Drawing.Point(242, 30);
+            this.listBoxStudents.Name = "listBoxStudents";
+            this.listBoxStudents.Size = new System.Drawing.Size(210, 147);
+            this.listBoxStudents.TabIndex = 13;
+            this.listBoxStudents.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxStudents_MouseDoubleClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 339);
+            this.Controls.Add(this.listBoxStudents);
             this.Controls.Add(this.lblStudents);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.btnEditStudent);
             this.Controls.Add(this.btnAddStudent);
@@ -197,8 +202,8 @@
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnEditStudent;
         private System.Windows.Forms.Button btnDeleteStudent;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label lblStudents;
+        private System.Windows.Forms.ListBox listBoxStudents;
     }
 }
 

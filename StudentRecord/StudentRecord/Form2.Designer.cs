@@ -36,12 +36,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tabControlClass = new System.Windows.Forms.TabControl();
             this.tabFall = new System.Windows.Forms.TabPage();
-            this.tabSpring = new System.Windows.Forms.TabPage();
             this.listboxFall = new System.Windows.Forms.ListBox();
+            this.tabSpring = new System.Windows.Forms.TabPage();
             this.listboxSpring = new System.Windows.Forms.ListBox();
             this.btnEditClass = new System.Windows.Forms.Button();
             this.btnFinish = new System.Windows.Forms.Button();
             this.btnGPA = new System.Windows.Forms.Button();
+            this.lblGPA = new System.Windows.Forms.Label();
             this.tabControlClass.SuspendLayout();
             this.tabFall.SuspendLayout();
             this.tabSpring.SuspendLayout();
@@ -109,7 +110,7 @@
             this.tabControlClass.Location = new System.Drawing.Point(209, 12);
             this.tabControlClass.Name = "tabControlClass";
             this.tabControlClass.SelectedIndex = 0;
-            this.tabControlClass.Size = new System.Drawing.Size(200, 148);
+            this.tabControlClass.Size = new System.Drawing.Size(199, 144);
             this.tabControlClass.TabIndex = 6;
             // 
             // tabFall
@@ -119,10 +120,18 @@
             this.tabFall.Name = "tabFall";
             this.tabFall.Padding = new System.Windows.Forms.Padding(3);
             this.tabFall.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabFall.Size = new System.Drawing.Size(192, 122);
+            this.tabFall.Size = new System.Drawing.Size(191, 118);
             this.tabFall.TabIndex = 0;
             this.tabFall.Text = "Fall";
             this.tabFall.UseVisualStyleBackColor = true;
+            // 
+            // listboxFall
+            // 
+            this.listboxFall.FormattingEnabled = true;
+            this.listboxFall.Location = new System.Drawing.Point(-1, -1);
+            this.listboxFall.Name = "listboxFall";
+            this.listboxFall.Size = new System.Drawing.Size(197, 121);
+            this.listboxFall.TabIndex = 0;
             // 
             // tabSpring
             // 
@@ -130,25 +139,17 @@
             this.tabSpring.Location = new System.Drawing.Point(4, 22);
             this.tabSpring.Name = "tabSpring";
             this.tabSpring.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSpring.Size = new System.Drawing.Size(192, 122);
+            this.tabSpring.Size = new System.Drawing.Size(191, 118);
             this.tabSpring.TabIndex = 1;
             this.tabSpring.Text = "Spring";
             this.tabSpring.UseVisualStyleBackColor = true;
             // 
-            // listboxFall
-            // 
-            this.listboxFall.FormattingEnabled = true;
-            this.listboxFall.Location = new System.Drawing.Point(-1, 0);
-            this.listboxFall.Name = "listboxFall";
-            this.listboxFall.Size = new System.Drawing.Size(193, 121);
-            this.listboxFall.TabIndex = 0;
-            // 
             // listboxSpring
             // 
             this.listboxSpring.FormattingEnabled = true;
-            this.listboxSpring.Location = new System.Drawing.Point(0, 0);
+            this.listboxSpring.Location = new System.Drawing.Point(-2, -1);
             this.listboxSpring.Name = "listboxSpring";
-            this.listboxSpring.Size = new System.Drawing.Size(193, 121);
+            this.listboxSpring.Size = new System.Drawing.Size(197, 121);
             this.listboxSpring.TabIndex = 0;
             // 
             // btnEditClass
@@ -178,11 +179,20 @@
             this.btnGPA.Text = "Calculate Cumulative GPA";
             this.btnGPA.UseVisualStyleBackColor = true;
             // 
+            // lblGPA
+            // 
+            this.lblGPA.AutoSize = true;
+            this.lblGPA.Location = new System.Drawing.Point(206, 281);
+            this.lblGPA.Name = "lblGPA";
+            this.lblGPA.Size = new System.Drawing.Size(0, 13);
+            this.lblGPA.TabIndex = 11;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 355);
+            this.Controls.Add(this.lblGPA);
             this.Controls.Add(this.btnGPA);
             this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.btnEditClass);
@@ -219,5 +229,6 @@
         private System.Windows.Forms.Button btnEditClass;
         private System.Windows.Forms.Button btnFinish;
         private System.Windows.Forms.Button btnGPA;
+        private System.Windows.Forms.Label lblGPA;
     }
 }

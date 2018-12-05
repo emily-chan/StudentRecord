@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 namespace StudentRecord
 {
     [Serializable]
-    class Student
+    public class Student
     {
-        private string firstName;
-        private string lastName;
-        private int id;
-       // private string level;
+        public string firstName;
+        public string lastName;
+        public string id;
+        public string level;
 
         public Student()
         {
             firstName = "";
             lastName = "";
-            id = 0;
+            id = "";
             
         } 
+        public string displayStudent { get { return firstName + ", " + lastName + " | " + id + " | " + level; } }
 
     }
 }

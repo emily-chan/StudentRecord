@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace StudentRecord
 {
-    class Class
+    public class Class
     {
         private string className;
         private int classNumber;
-
+        
 
         public Class()
         {

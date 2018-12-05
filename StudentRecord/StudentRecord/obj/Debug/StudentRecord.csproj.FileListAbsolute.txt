@@ -9,3 +9,15 @@ C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\D
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form2.resources
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.exe
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.pdb
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentRecord.exe.config
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentRecord.exe
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentRecord.pdb
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csprojAssemblyReference.cache
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form1.resources
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form2.resources
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form3.resources
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Properties.Resources.resources
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csproj.GenerateResource.cache
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csproj.CoreCompileInputs.cache
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.exe
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.pdb
