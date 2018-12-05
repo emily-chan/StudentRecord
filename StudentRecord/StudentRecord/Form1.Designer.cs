@@ -120,7 +120,7 @@
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(90, 23);
             this.btnAddStudent.TabIndex = 8;
-            this.btnAddStudent.Text = "Add Student";
+            this.btnAddStudent.Text = "Save Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 

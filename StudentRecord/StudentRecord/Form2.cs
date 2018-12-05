@@ -15,11 +15,20 @@ namespace StudentRecord
     public partial class Form2 : Form
     {
         static BindingList<Class> classes = new BindingList<Class>();
-        public Form2()
+        static Form1 obj = new Form1();
+
+        int studentIdx;
+
+        public Form2(Form1 form1, int student)
         {
             LoadRecord();
             InitializeComponent();
+            obj = form1;
+            studentIdx = student;
+           // Form1.students[studentIdx];// this is what you use to reference back to student fromm form one so everything updates.
+            
             BindListBox();
+
         }
 
         private void BindListBox()
@@ -28,36 +37,48 @@ namespace StudentRecord
             listboxFall.DisplayMember = "displayClass";
 
             listboxSpring.DataSource = classes;
-            listboxSpring.DisplayMember = "displayeClass";
+            listboxSpring.DisplayMember = "displayClass";
         }
 
         private void btnAddClass_Click(object sender, EventArgs e)
-        {
+        {   
+            Term t;
+            Class c;
+
             if(tabControlClass.SelectedIndex == 0)
             {
-                classes.Add(new Class()
+                t = new Term { semester = "Fall", year = textBoxYear.Text };
+                c = new Class{ className = textboxClass.Text, classNumber = textBoxNumber.Text};
+                classes.Add(c);
+
+                if (Form1.students[studentIdx].studentClasses.ContainsKey(t))
                 {
-                    semester = "Fall",
-                    year = textBoxYear.Text,
-                    className = textboxClass.Text,
-                    classNumber = textBoxNumber.Text
-
-
-                });
+                    Form1.students[studentIdx].studentClasses[t].Add(c);
+                }
+                else
+                {
+                    Form1.students[studentIdx].studentClasses.Add(t, new List<Class>());
+                    Form1.students[studentIdx].studentClasses[t].Add(c);
+                }
+                    
             }
             else if (tabControlClass.SelectedIndex == 1)
             {
-                classes.Add(new Class()
+                t = new Term { semester = "Spring", year = textBoxYear.Text };
+                c = new Class { className = textboxClass.Text, classNumber = textBoxNumber.Text };
+                classes.Add(c);
+
+                if (Form1.students[studentIdx].studentClasses.ContainsKey(t))
                 {
-                    semester = "Spring",
-                    year = textBoxYear.Text,
-                    className = textboxClass.Text,
-                    classNumber = textBoxNumber.Text
-
-
-                });
+                    Form1.students[studentIdx].studentClasses[t].Add(c);
+                }
+                else
+                {
+                    Form1.students[studentIdx].studentClasses.Add(t, new List<Class>());
+                    Form1.students[studentIdx].studentClasses[t].Add(c);
+                }
             }
-            WriteRecord();
+           WriteRecord();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,17 +97,17 @@ namespace StudentRecord
                     classes.RemoveAt(listboxSpring.SelectedIndex);
                 }
             }
-            WriteRecord();
+           WriteRecord();
         }
 
 
         //serialization part
 
 
-        public static void WriteRecord()
+       public static void WriteRecord()
         {
             //serialization-xml
-            XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Student>));
+            XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Class>));
             TextWriter writer = new StreamWriter("serialized.xml");
             serializerW.Serialize(writer, classes);
             writer.Close();
@@ -96,7 +117,7 @@ namespace StudentRecord
             try
             {
                 //deserialization-xml
-                XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
+                XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Class>));
                 TextReader reader = new StreamReader("serialized.xml");
                 classes = (BindingList<Class>)serializerR.Deserialize(reader);
                 reader.Close();

@@ -16,12 +16,12 @@ namespace StudentRecord
 {
     public partial class Form1 : Form
     {
-        static BindingList<Student> students = new BindingList<Student>();
-        //Serialization serialize = new Serialization();
+        public static BindingList<Student> students = new BindingList<Student>();
+        
         public Form1()
         {
-            // serialize.LoadRecord(students);
-            LoadRecord();
+           
+            //LoadRecord();
             InitializeComponent();
             BindListBox();
         }
@@ -81,7 +81,7 @@ namespace StudentRecord
                 });
 
             }
-            WriteRecord();
+            //WriteRecord();
 
         }
         //to open form 2
@@ -91,17 +91,30 @@ namespace StudentRecord
             if (listBoxStudents.SelectedIndex > -1)
             {
                 //we need to figure out a way to link the student, with the term and class.... link everything together.
-                Student student = students[listBoxStudents.SelectedIndex];
-                Form2 f2 = new Form2();
+                
+                Form2 f2 = new Form2(this, listBoxStudents.SelectedIndex);
                 f2.Show();
             }
         }
        
        
-
+       
         private void btnEditStudent_Click(object sender, EventArgs e)
         {
             //don't know what to code to edit.
+
+            if (listBoxStudents.SelectedIndex > -1)
+            {
+                //it edits but it adds another student.
+
+                textboxFirst.Text = students[listBoxStudents.SelectedIndex].firstName;
+                textboxLast.Text = students[listBoxStudents.SelectedIndex].lastName;
+                textboxID.Text = students[listBoxStudents.SelectedIndex].id;
+
+                //remove after, so when you click save, it doesnt have two variables.
+                //students.RemoveAt(listBoxStudents.SelectedIndex);
+                
+            }
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
@@ -113,14 +126,14 @@ namespace StudentRecord
                 students.RemoveAt(listBoxStudents.SelectedIndex);
             }
 
-            WriteRecord();
+            //WriteRecord();
         }
 
 
         //serialization part
+        //i don't know to serialize a dictionary
 
-
-        public static void WriteRecord()
+      /* public static void WriteRecord()
         {
             //serialization-xml
             XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Student>));
@@ -133,7 +146,7 @@ namespace StudentRecord
             try
             {
                 //deserialization-xml
-                XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
+               XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
                TextReader reader = new StreamReader("serialized.xml");
                 students = (BindingList<Student>)serializerR.Deserialize(reader);
                 reader.Close();
@@ -142,7 +155,7 @@ namespace StudentRecord
             {
                 Console.WriteLine("Error");
             }
-        }
+        }*/
 
        
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentRecord
 {
-    public class Class:Term
+    public class Class
     {
         public string className;
         public string classNumber;
@@ -18,6 +18,6 @@ namespace StudentRecord
             classNumber = "";
         }
 
-        public string displayClass { get { return semester+" "+ year + " - " + className + "(" + classNumber+ ")"; } }
+        public string displayClass { get { return  className + "(" + classNumber+ ")"; } }
     }
 }
