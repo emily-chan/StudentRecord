@@ -14,6 +14,7 @@ namespace StudentRecord
 {
     public partial class Form2 : Form
     {
+        static BindingList<Term> terms = new BindingList<Term>();
         static BindingList<Class> classes = new BindingList<Class>();
         public Form2()
         {
@@ -30,37 +31,24 @@ namespace StudentRecord
             listboxSpring.DataSource = classes;
             listboxSpring.DisplayMember = "displayeClass";
         }
-
+        
         private void btnAddClass_Click(object sender, EventArgs e)
         {
-            if(tabControlClass.SelectedIndex == 0)
+            if (comboTerm.Equals("Fall"))
             {
-                classes.Add(new Class()
+                if (tabControlClass.SelectedIndex == 0)
                 {
-                    semester = "Fall",
-                    year = textBoxYear.Text,
-                    className = textboxClass.Text,
-                    classNumber = textBoxNumber.Text
-
-
-                });
-            }
-            else if (tabControlClass.SelectedIndex == 1)
-            {
-                classes.Add(new Class()
-                {
-                    semester = "Spring",
-                    year = textBoxYear.Text,
-                    className = textboxClass.Text,
-                    classNumber = textBoxNumber.Text
-
-
-                });
+                    classes.Add(new Class()
+                    {
+                        className = textboxClass.Text,
+                        classNumber = textBoxNumber.Text
+                    });
+                }
             }
             WriteRecord();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDeleteClass_Click(object sender, EventArgs e)
         {
             if (tabControlClass.SelectedIndex == 0)
             {
@@ -107,5 +95,6 @@ namespace StudentRecord
             }
         }
 
+       
     }
 }

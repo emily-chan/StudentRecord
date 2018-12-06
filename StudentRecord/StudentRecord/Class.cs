@@ -10,7 +10,6 @@ namespace StudentRecord
     {
         public string className;
         public string classNumber;
-        public string
 
         public Class()
         {

@@ -33,7 +33,7 @@
             this.lblClass = new System.Windows.Forms.Label();
             this.textboxClass = new System.Windows.Forms.TextBox();
             this.btnAddClass = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeleteClass = new System.Windows.Forms.Button();
             this.tabControlClass = new System.Windows.Forms.TabControl();
             this.tabFall = new System.Windows.Forms.TabPage();
             this.listboxFall = new System.Windows.Forms.ListBox();
@@ -83,7 +83,7 @@
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(27, 95);
+            this.lblClass.Location = new System.Drawing.Point(27, 116);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(35, 13);
             this.lblClass.TabIndex = 2;
@@ -91,7 +91,7 @@
             // 
             // textboxClass
             // 
-            this.textboxClass.Location = new System.Drawing.Point(30, 111);
+            this.textboxClass.Location = new System.Drawing.Point(30, 132);
             this.textboxClass.Name = "textboxClass";
             this.textboxClass.Size = new System.Drawing.Size(121, 20);
             this.textboxClass.TabIndex = 3;
@@ -106,21 +106,21 @@
             this.btnAddClass.UseVisualStyleBackColor = true;
             this.btnAddClass.Click += new System.EventHandler(this.btnAddClass_Click);
             // 
-            // button1
+            // btnDeleteClass
             // 
-            this.button1.Location = new System.Drawing.Point(114, 447);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Delete Class";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDeleteClass.Location = new System.Drawing.Point(114, 447);
+            this.btnDeleteClass.Name = "btnDeleteClass";
+            this.btnDeleteClass.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteClass.TabIndex = 5;
+            this.btnDeleteClass.Text = "Delete Class";
+            this.btnDeleteClass.UseVisualStyleBackColor = true;
+            this.btnDeleteClass.Click += new System.EventHandler(this.btnDeleteClass_Click);
             // 
             // tabControlClass
             // 
             this.tabControlClass.Controls.Add(this.tabFall);
             this.tabControlClass.Controls.Add(this.tabSpring);
-            this.tabControlClass.Location = new System.Drawing.Point(209, 12);
+            this.tabControlClass.Location = new System.Drawing.Point(219, 26);
             this.tabControlClass.Name = "tabControlClass";
             this.tabControlClass.SelectedIndex = 0;
             this.tabControlClass.Size = new System.Drawing.Size(199, 144);
@@ -202,7 +202,7 @@
             // lblClassNumber
             // 
             this.lblClassNumber.AutoSize = true;
-            this.lblClassNumber.Location = new System.Drawing.Point(33, 152);
+            this.lblClassNumber.Location = new System.Drawing.Point(33, 173);
             this.lblClassNumber.Name = "lblClassNumber";
             this.lblClassNumber.Size = new System.Drawing.Size(72, 13);
             this.lblClassNumber.TabIndex = 14;
@@ -210,7 +210,7 @@
             // 
             // textBoxNumber
             // 
-            this.textBoxNumber.Location = new System.Drawing.Point(30, 178);
+            this.textBoxNumber.Location = new System.Drawing.Point(30, 199);
             this.textBoxNumber.Name = "textBoxNumber";
             this.textBoxNumber.Size = new System.Drawing.Size(100, 20);
             this.textBoxNumber.TabIndex = 15;
@@ -236,7 +236,7 @@
             // lblCategories
             // 
             this.lblCategories.AutoSize = true;
-            this.lblCategories.Location = new System.Drawing.Point(223, 215);
+            this.lblCategories.Location = new System.Drawing.Point(243, 215);
             this.lblCategories.Name = "lblCategories";
             this.lblCategories.Size = new System.Drawing.Size(60, 13);
             this.lblCategories.TabIndex = 28;
@@ -244,7 +244,7 @@
             // 
             // listViewCategories
             // 
-            this.listViewCategories.Location = new System.Drawing.Point(226, 235);
+            this.listViewCategories.Location = new System.Drawing.Point(246, 235);
             this.listViewCategories.Name = "listViewCategories";
             this.listViewCategories.Size = new System.Drawing.Size(159, 137);
             this.listViewCategories.TabIndex = 27;
@@ -294,7 +294,7 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(32, 215);
+            this.lblCategory.Location = new System.Drawing.Point(35, 222);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(52, 13);
             this.lblCategory.TabIndex = 22;
@@ -321,7 +321,7 @@
             this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.btnEditClass);
             this.Controls.Add(this.tabControlClass);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDeleteClass);
             this.Controls.Add(this.btnAddClass);
             this.Controls.Add(this.textboxClass);
             this.Controls.Add(this.lblClass);
@@ -344,7 +344,7 @@
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.TextBox textboxClass;
         private System.Windows.Forms.Button btnAddClass;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDeleteClass;
         private System.Windows.Forms.TabControl tabControlClass;
         private System.Windows.Forms.TabPage tabFall;
         private System.Windows.Forms.ListBox listboxFall;
