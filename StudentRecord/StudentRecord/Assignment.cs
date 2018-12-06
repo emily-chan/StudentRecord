@@ -13,19 +13,13 @@ namespace StudentRecord
         public string pointsReceived;
         public string totalPoints;
         public double percentage;
- 
 
         public double calculatePercentage(string pointsReceived, string totalPoints)
         {
-           
-
             double points = Convert.ToDouble(pointsReceived);
             double total= Convert.ToDouble(totalPoints);
-
             percentage = points / total;
-
             return percentage;
-
         }
     }
 }
