@@ -42,15 +42,14 @@ namespace StudentRecord
         }
         
         private void btnAddClass_Click(object sender, EventArgs e)
-<<<<<<< HEAD
         {   
             Term t;
             Class c;
 
-            if(tabControlClass.SelectedIndex == 0)
+            if (tabControlClass.SelectedIndex == 0)
             {
                 t = new Term { semester = "Fall", year = textBoxYear.Text };
-                c = new Class{ className = textboxClass.Text, classNumber = textBoxNumber.Text};
+                c = new Class { className = textboxClass.Text, classNumber = textBoxNumber.Text };
                 classes.Add(c);
 
                 if (Form1.students[studentIdx].studentClasses.ContainsKey(t))
@@ -62,7 +61,7 @@ namespace StudentRecord
                     Form1.students[studentIdx].studentClasses.Add(t, new List<Class>());
                     Form1.students[studentIdx].studentClasses[t].Add(c);
                 }
-                    
+
             }
             else if (tabControlClass.SelectedIndex == 1)
             {
@@ -78,8 +77,8 @@ namespace StudentRecord
                 {
                     Form1.students[studentIdx].studentClasses.Add(t, new List<Class>());
                     Form1.students[studentIdx].studentClasses[t].Add(c);
-=======
-        {
+                }
+            }
             if (comboTerm.Equals("Fall"))
             {
                 if (tabControlClass.SelectedIndex == 0)
@@ -89,7 +88,7 @@ namespace StudentRecord
                         className = textboxClass.Text,
                         classNumber = textBoxNumber.Text
                     });
->>>>>>> c2a4e3b9aa317c76c0f23d17be935dcef43d7ce3
+
                 }
             }
            WriteRecord();
