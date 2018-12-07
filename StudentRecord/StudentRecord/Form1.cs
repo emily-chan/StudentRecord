@@ -11,6 +11,8 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace StudentRecord
 {
@@ -20,11 +22,22 @@ namespace StudentRecord
         
         public Form1()
         {
-           
+
             //LoadRecord();
+            Thread t = new Thread(new ThreadStart(StartForm));
+            t.Start();
+            Thread.Sleep(5000);
             InitializeComponent();
+            
             BindListBox();
+            //t.Abort();
         }
+
+        public void StartForm()
+        {
+            Application.Run(new SplashScreen());
+        }
+
         private void BindListBox()
         {
             listBoxStudents.DataSource = students;
@@ -81,6 +94,12 @@ namespace StudentRecord
                 });
 
             }
+            textboxFirst.Text = "";
+            textboxLast.Text = "";
+            textboxID.Text = "";
+            comboLevel.Text = "";
+
+
             //WriteRecord();
 
         }
