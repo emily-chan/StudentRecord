@@ -14,7 +14,7 @@ namespace StudentRecord
 {
     public partial class Form2 : Form
     {
-        static BindingList<Term> terms = new BindingList<Term>();
+        static BindingList<Term> springTerm = new BindingList<Term>(); 
         static BindingList<Class> classes = new BindingList<Class>();
         static Form1 obj = new Form1();
 

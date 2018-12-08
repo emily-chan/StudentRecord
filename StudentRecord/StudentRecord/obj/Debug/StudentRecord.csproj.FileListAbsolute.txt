@@ -24,3 +24,16 @@ C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form4.resources
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form4.resources
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.SplashScreen.resources
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentRecord.exe.config
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentRecord.exe
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentRecord.pdb
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csprojAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form1.resources
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form2.resources
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form4.resources
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Properties.Resources.resources
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.SplashScreen.resources
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csproj.GenerateResource.cache
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.exe
+\\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.pdb

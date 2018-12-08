@@ -12,7 +12,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace StudentRecord
 {
@@ -28,9 +27,15 @@ namespace StudentRecord
             t.Start();
             Thread.Sleep(5000);
             InitializeComponent();
+            t.Abort();
+
+            Combo();
             
             BindListBox();
-            //t.Abort();
+        }
+        public void Combo()//use when running 
+        {
+            gradeLevel.Items.AddRange(new object[] { "Freshman", "Sophomore", "Junior", "Senior" });
         }
 
         public void StartForm()
@@ -106,6 +111,7 @@ namespace StudentRecord
         //to open form 2
         private void listBoxStudents_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+          
 
             if (listBoxStudents.SelectedIndex > -1)
             {
