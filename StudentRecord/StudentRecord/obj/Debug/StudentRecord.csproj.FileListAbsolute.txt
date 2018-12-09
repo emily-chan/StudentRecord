@@ -37,3 +37,5 @@ C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\D
 \\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csproj.CoreCompileInputs.cache
 \\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.exe
 \\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.pdb
+C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentDatabase.mdf
+C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentDatabase_log.ldf

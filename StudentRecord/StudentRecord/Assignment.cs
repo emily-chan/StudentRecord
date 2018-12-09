@@ -10,9 +10,19 @@ namespace StudentRecord
     {
         public string assignmentName;
         public string category;
+        public string weight;
         public string pointsReceived;
         public string totalPoints;
         public double percentage;
+
+        // display category in listBoxCategories
+        public string displayCategory
+        {
+            get
+            {
+                return category + ": " + weight + "%";
+            }
+        }
 
         public double calculatePercentage(string pointsReceived, string totalPoints)
         {
@@ -21,5 +31,7 @@ namespace StudentRecord
             percentage = points / total;
             return percentage;
         }
+
+
     }
 }

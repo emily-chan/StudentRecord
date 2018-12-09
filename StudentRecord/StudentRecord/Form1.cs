@@ -12,13 +12,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace StudentRecord
 {
     public partial class Form1 : Form
     {
         public static BindingList<Student> students = new BindingList<Student>();
-        
+        string connectionString = "Server = localhost\\SQLEXPRESS; Database = master; Trusted_Connection = True";
+
+
         public Form1()
         {
 
@@ -29,15 +32,16 @@ namespace StudentRecord
             InitializeComponent();
             t.Abort();
 
-            Combo();
+         //   Combo();
             
             BindListBox();
         }
+        /*
         public void Combo()//use when running 
         {
             gradeLevel.Items.AddRange(new object[] { "Freshman", "Sophomore", "Junior", "Senior" });
         }
-
+        */
         public void StartForm()
         {
             Application.Run(new SplashScreen());
@@ -104,7 +108,6 @@ namespace StudentRecord
             textboxID.Text = "";
             comboLevel.Text = "";
 
-
             //WriteRecord();
 
         }
@@ -153,35 +156,87 @@ namespace StudentRecord
 
             //WriteRecord();
         }
+        
+        /*
+        public void PopulateLevelComboBox()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * FROM Current Level", sqlCon);
+                DataTable dTable = new DataTable();
+                sqlData.Fill(dTable);
+                currentLevel.ValueMember = "Current Level ID";
+                currentLevel.DisplayMember = "Current Level";
+                DataRow topItem = dTable.NewRow();
+                topItem[0] = 0;
+                topItem[1] = "-Select-";
+                dTable.Rows.InsertAt(topItem, 0);
+                currentLevel.DataSource = dTable;
+            }
+        }
+
+        
+        public void PopulateDataGridView()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * FROM Level", sqlCon);
+                DataTable dTable = new DataTable();
+                sqlData.Fill(dTable);
+                currentLevel.ValueMember = "Current Level ID";
+                currentLevel.DisplayMember = "Current Level";
+                DataRow topItem = dTable.NewRow();
+                topItem[0] = 0;
+                topItem[1] = "Select";
+                dTable.Rows.InsertAt(topItem, 0);
+                currentLevel.DataSource = dTable;
+            }
+        }
+        */
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //PopulateLevelComboBox();
+        }
+        
+        private void listBoxStudents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxStudents.SelectedIndex > -1)
+            {
+                // updates label to show info of the item that is selected
+                lblStudent.Text = students[listBoxStudents.SelectedIndex].studentInfo;
+            }
+        }
 
 
         //serialization part
         //i don't know to serialize a dictionary
 
-      /* public static void WriteRecord()
-        {
-            //serialization-xml
-            XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Student>));
-            TextWriter writer = new StreamWriter("serialized.xml");
-            serializerW.Serialize(writer, students);
-            writer.Close();
-        }
-        public static void LoadRecord()
-        {
-            try
-            {
-                //deserialization-xml
-               XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
-               TextReader reader = new StreamReader("serialized.xml");
-                students = (BindingList<Student>)serializerR.Deserialize(reader);
-                reader.Close();
-            }
-            catch (FileNotFoundException e)
-            {
-                Console.WriteLine("Error");
-            }
-        }*/
+        /* public static void WriteRecord()
+          {
+              //serialization-xml
+              XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Student>));
+              TextWriter writer = new StreamWriter("serialized.xml");
+              serializerW.Serialize(writer, students);
+              writer.Close();
+          }
+          public static void LoadRecord()
+          {
+              try
+              {
+                  //deserialization-xml
+                 XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
+                 TextReader reader = new StreamReader("serialized.xml");
+                  students = (BindingList<Student>)serializerR.Deserialize(reader);
+                  reader.Close();
+              }
+              catch (FileNotFoundException e)
+              {
+                  Console.WriteLine("Error");
+              }
+          }*/
 
-       
+
     }
 }

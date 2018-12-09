@@ -48,12 +48,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnDeleteCategory = new System.Windows.Forms.Button();
             this.lblCategories = new System.Windows.Forms.Label();
-            this.listViewCategories = new System.Windows.Forms.ListView();
             this.lblWeight = new System.Windows.Forms.Label();
             this.textBoxWeight = new System.Windows.Forms.TextBox();
             this.btnAddCategory = new System.Windows.Forms.Button();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
+            this.lblClassInfo = new System.Windows.Forms.Label();
+            this.listBoxCategories = new System.Windows.Forms.ListBox();
             this.tabControlClass.SuspendLayout();
             this.tabFall.SuspendLayout();
             this.tabSpring.SuspendLayout();
@@ -83,7 +84,7 @@
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(27, 116);
+            this.lblClass.Location = new System.Drawing.Point(27, 94);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(35, 13);
             this.lblClass.TabIndex = 2;
@@ -91,14 +92,14 @@
             // 
             // textboxClass
             // 
-            this.textboxClass.Location = new System.Drawing.Point(30, 132);
+            this.textboxClass.Location = new System.Drawing.Point(30, 110);
             this.textboxClass.Name = "textboxClass";
             this.textboxClass.Size = new System.Drawing.Size(121, 20);
             this.textboxClass.TabIndex = 3;
             // 
             // btnAddClass
             // 
-            this.btnAddClass.Location = new System.Drawing.Point(33, 447);
+            this.btnAddClass.Location = new System.Drawing.Point(30, 420);
             this.btnAddClass.Name = "btnAddClass";
             this.btnAddClass.Size = new System.Drawing.Size(75, 23);
             this.btnAddClass.TabIndex = 4;
@@ -108,7 +109,7 @@
             // 
             // btnDeleteClass
             // 
-            this.btnDeleteClass.Location = new System.Drawing.Point(114, 447);
+            this.btnDeleteClass.Location = new System.Drawing.Point(111, 420);
             this.btnDeleteClass.Name = "btnDeleteClass";
             this.btnDeleteClass.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteClass.TabIndex = 5;
@@ -145,6 +146,7 @@
             this.listboxFall.Name = "listboxFall";
             this.listboxFall.Size = new System.Drawing.Size(197, 121);
             this.listboxFall.TabIndex = 0;
+            this.listboxFall.SelectedIndexChanged += new System.EventHandler(this.listboxFall_SelectedIndexChanged);
             // 
             // tabSpring
             // 
@@ -164,10 +166,11 @@
             this.listboxSpring.Name = "listboxSpring";
             this.listboxSpring.Size = new System.Drawing.Size(197, 121);
             this.listboxSpring.TabIndex = 0;
+            this.listboxSpring.SelectedIndexChanged += new System.EventHandler(this.listboxSpring_SelectedIndexChanged);
             // 
             // btnEditClass
             // 
-            this.btnEditClass.Location = new System.Drawing.Point(33, 485);
+            this.btnEditClass.Location = new System.Drawing.Point(30, 458);
             this.btnEditClass.Name = "btnEditClass";
             this.btnEditClass.Size = new System.Drawing.Size(75, 23);
             this.btnEditClass.TabIndex = 7;
@@ -176,7 +179,7 @@
             // 
             // btnFinish
             // 
-            this.btnFinish.Location = new System.Drawing.Point(114, 485);
+            this.btnFinish.Location = new System.Drawing.Point(111, 458);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(75, 23);
             this.btnFinish.TabIndex = 8;
@@ -202,7 +205,7 @@
             // lblClassNumber
             // 
             this.lblClassNumber.AutoSize = true;
-            this.lblClassNumber.Location = new System.Drawing.Point(33, 173);
+            this.lblClassNumber.Location = new System.Drawing.Point(27, 153);
             this.lblClassNumber.Name = "lblClassNumber";
             this.lblClassNumber.Size = new System.Drawing.Size(72, 13);
             this.lblClassNumber.TabIndex = 14;
@@ -210,14 +213,14 @@
             // 
             // textBoxNumber
             // 
-            this.textBoxNumber.Location = new System.Drawing.Point(30, 199);
+            this.textBoxNumber.Location = new System.Drawing.Point(30, 169);
             this.textBoxNumber.Name = "textBoxNumber";
-            this.textBoxNumber.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNumber.Size = new System.Drawing.Size(121, 20);
             this.textBoxNumber.TabIndex = 15;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(239, 452);
+            this.label1.Location = new System.Drawing.Point(229, 425);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 45);
             this.label1.TabIndex = 16;
@@ -226,54 +229,48 @@
             // 
             // btnDeleteCategory
             // 
-            this.btnDeleteCategory.Location = new System.Drawing.Point(38, 379);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(30, 355);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
-            this.btnDeleteCategory.Size = new System.Drawing.Size(106, 23);
+            this.btnDeleteCategory.Size = new System.Drawing.Size(109, 23);
             this.btnDeleteCategory.TabIndex = 31;
             this.btnDeleteCategory.Text = "Delete Category";
             this.btnDeleteCategory.UseVisualStyleBackColor = true;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
             // 
             // lblCategories
             // 
             this.lblCategories.AutoSize = true;
-            this.lblCategories.Location = new System.Drawing.Point(243, 215);
+            this.lblCategories.Location = new System.Drawing.Point(219, 209);
             this.lblCategories.Name = "lblCategories";
             this.lblCategories.Size = new System.Drawing.Size(60, 13);
             this.lblCategories.TabIndex = 28;
             this.lblCategories.Text = "Categories:";
             // 
-            // listViewCategories
-            // 
-            this.listViewCategories.Location = new System.Drawing.Point(246, 235);
-            this.listViewCategories.Name = "listViewCategories";
-            this.listViewCategories.Size = new System.Drawing.Size(159, 137);
-            this.listViewCategories.TabIndex = 27;
-            this.listViewCategories.UseCompatibleStateImageBehavior = false;
-            // 
             // lblWeight
             // 
             this.lblWeight.AutoSize = true;
-            this.lblWeight.Location = new System.Drawing.Point(32, 285);
+            this.lblWeight.Location = new System.Drawing.Point(27, 269);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(41, 13);
+            this.lblWeight.Size = new System.Drawing.Size(58, 13);
             this.lblWeight.TabIndex = 26;
-            this.lblWeight.Text = "Weight";
+            this.lblWeight.Text = "Weight (%)";
             // 
             // textBoxWeight
             // 
-            this.textBoxWeight.Location = new System.Drawing.Point(35, 312);
+            this.textBoxWeight.Location = new System.Drawing.Point(30, 285);
             this.textBoxWeight.Name = "textBoxWeight";
             this.textBoxWeight.Size = new System.Drawing.Size(109, 20);
             this.textBoxWeight.TabIndex = 25;
             // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(35, 349);
+            this.btnAddCategory.Location = new System.Drawing.Point(30, 322);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(109, 23);
             this.btnAddCategory.TabIndex = 24;
             this.btnAddCategory.Text = "Add Category";
             this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // comboBoxCategory
             // 
@@ -286,7 +283,7 @@
             "Quizzes",
             "Final",
             "Projects"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(35, 244);
+            this.comboBoxCategory.Location = new System.Drawing.Point(30, 231);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(109, 21);
             this.comboBoxCategory.TabIndex = 23;
@@ -294,20 +291,37 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(35, 222);
+            this.lblCategory.Location = new System.Drawing.Point(30, 209);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(52, 13);
             this.lblCategory.TabIndex = 22;
             this.lblCategory.Text = "Category:";
+            // 
+            // lblClassInfo
+            // 
+            this.lblClassInfo.AutoSize = true;
+            this.lblClassInfo.Location = new System.Drawing.Point(229, 186);
+            this.lblClassInfo.Name = "lblClassInfo";
+            this.lblClassInfo.Size = new System.Drawing.Size(0, 13);
+            this.lblClassInfo.TabIndex = 32;
+            // 
+            // listBoxCategories
+            // 
+            this.listBoxCategories.FormattingEnabled = true;
+            this.listBoxCategories.Location = new System.Drawing.Point(219, 231);
+            this.listBoxCategories.Name = "listBoxCategories";
+            this.listBoxCategories.Size = new System.Drawing.Size(200, 147);
+            this.listBoxCategories.TabIndex = 33;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 749);
+            this.Controls.Add(this.listBoxCategories);
+            this.Controls.Add(this.lblClassInfo);
             this.Controls.Add(this.btnDeleteCategory);
             this.Controls.Add(this.lblCategories);
-            this.Controls.Add(this.listViewCategories);
             this.Controls.Add(this.lblWeight);
             this.Controls.Add(this.textBoxWeight);
             this.Controls.Add(this.btnAddCategory);
@@ -359,11 +373,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDeleteCategory;
         private System.Windows.Forms.Label lblCategories;
-        private System.Windows.Forms.ListView listViewCategories;
         private System.Windows.Forms.Label lblWeight;
         private System.Windows.Forms.TextBox textBoxWeight;
         private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.ComboBox comboBoxCategory;
         private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblClassInfo;
+        private System.Windows.Forms.ListBox listBoxCategories;
     }
 }
