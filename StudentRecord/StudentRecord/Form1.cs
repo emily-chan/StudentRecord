@@ -25,7 +25,7 @@ namespace StudentRecord
             //LoadRecord();
             Thread t = new Thread(new ThreadStart(StartForm));
             t.Start();
-            Thread.Sleep(5000);
+            Thread.Sleep(5000)
             InitializeComponent();
             t.Abort();
 

@@ -140,7 +140,14 @@ namespace StudentRecord
                 Console.WriteLine("Error");
             }
         }
+        
+        private void btnGpaCalculator_Click(object sender, EventArgs e)
+        {
+            
 
-       
+                GPACalculator f3 = new GPACalculator();
+                f3.Show();
+            }
+        }
     }
 }

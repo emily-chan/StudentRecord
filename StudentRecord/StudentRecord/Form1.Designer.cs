@@ -41,12 +41,6 @@
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.lblStudents = new System.Windows.Forms.Label();
             this.listBoxStudents = new System.Windows.Forms.ListBox();
-            this.dataGridStudents = new System.Windows.Forms.DataGridView();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gradeLevel = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirst
@@ -182,56 +176,11 @@
             this.listBoxStudents.TabIndex = 13;
             this.listBoxStudents.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxStudents_MouseDoubleClick);
             // 
-            // dataGridStudents
-            // 
-            this.dataGridStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FirstName,
-            this.lastName,
-            this.studentID,
-            this.gradeLevel});
-            this.dataGridStudents.Location = new System.Drawing.Point(445, 388);
-            this.dataGridStudents.Name = "dataGridStudents";
-            this.dataGridStudents.RowTemplate.Height = 33;
-            this.dataGridStudents.Size = new System.Drawing.Size(738, 228);
-            this.dataGridStudents.TabIndex = 14;
-            // 
-            // FirstName
-            // 
-            this.FirstName.Frozen = true;
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            // 
-            // lastName
-            // 
-            this.lastName.Frozen = true;
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            // 
-            // studentID
-            // 
-            this.studentID.Frozen = true;
-            this.studentID.HeaderText = "ID Number";
-            this.studentID.Name = "studentID";
-            this.studentID.ReadOnly = true;
-            // 
-            // gradeLevel
-            // 
-            this.gradeLevel.Frozen = true;
-            this.gradeLevel.HeaderText = "Current Grade";
-            this.gradeLevel.Name = "gradeLevel";
-            this.gradeLevel.ReadOnly = true;
-            this.gradeLevel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gradeLevel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1426, 652);
-            this.Controls.Add(this.dataGridStudents);
             this.Controls.Add(this.listBoxStudents);
             this.Controls.Add(this.lblStudents);
             this.Controls.Add(this.btnDeleteStudent);
@@ -249,7 +198,6 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Student Record";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,11 +218,6 @@
         private System.Windows.Forms.Button btnDeleteStudent;
         private System.Windows.Forms.Label lblStudents;
         private System.Windows.Forms.ListBox listBoxStudents;
-        private System.Windows.Forms.DataGridView dataGridStudents;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentID;
-        private System.Windows.Forms.DataGridViewComboBoxColumn gradeLevel;
     }
 }
 
