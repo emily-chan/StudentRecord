@@ -113,8 +113,8 @@ namespace StudentRecord
 
                
                 }
-            
-            txtboxResultGPA.Text = Gpa.ToString("0.0"); 
+
+            lblGPAResult.Text = Gpa.ToString("0.0"); 
 
 
 

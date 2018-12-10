@@ -25,7 +25,22 @@ namespace StudentRecord
             //studentClasses = new Dictionary<Term, List<Class>>();
 
         }
-        public string displayStudent { get { return firstName + ", " + lastName + " | " + id + " | " + level; } }
+        // display student in listBoxStudents
+        public string displayStudent
+        {
+            get
+            {
+                return firstName + ", " + lastName + " | " + id + " | " + level;
+            }
+        }
 
+        // display student info in lblStudent when specific student is clicked from listbox
+        public string studentInfo
+        {
+            get
+            {
+                return "First name: " + firstName + "\nLast name: " + lastName + "\nID: " + id + "\nLevel: " + level;
+            }
+        }
     }
 }

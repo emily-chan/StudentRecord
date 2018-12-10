@@ -41,69 +41,63 @@
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.lblStudents = new System.Windows.Forms.Label();
             this.listBoxStudents = new System.Windows.Forms.ListBox();
+            this.lblStudentInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblFirst
             // 
             this.lblFirst.AutoSize = true;
-            this.lblFirst.Location = new System.Drawing.Point(36, 17);
-            this.lblFirst.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblFirst.Location = new System.Drawing.Point(18, 9);
             this.lblFirst.Name = "lblFirst";
-            this.lblFirst.Size = new System.Drawing.Size(122, 25);
+            this.lblFirst.Size = new System.Drawing.Size(60, 13);
             this.lblFirst.TabIndex = 0;
             this.lblFirst.Text = "First Name:";
             // 
             // textboxFirst
             // 
-            this.textboxFirst.Location = new System.Drawing.Point(42, 48);
-            this.textboxFirst.Margin = new System.Windows.Forms.Padding(6);
+            this.textboxFirst.Location = new System.Drawing.Point(21, 25);
             this.textboxFirst.Name = "textboxFirst";
-            this.textboxFirst.Size = new System.Drawing.Size(196, 31);
+            this.textboxFirst.Size = new System.Drawing.Size(100, 20);
             this.textboxFirst.TabIndex = 1;
             // 
             // lblLast
             // 
             this.lblLast.AutoSize = true;
-            this.lblLast.Location = new System.Drawing.Point(36, 119);
-            this.lblLast.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblLast.Location = new System.Drawing.Point(18, 62);
             this.lblLast.Name = "lblLast";
-            this.lblLast.Size = new System.Drawing.Size(121, 25);
+            this.lblLast.Size = new System.Drawing.Size(61, 13);
             this.lblLast.TabIndex = 2;
             this.lblLast.Text = "Last Name:";
             // 
             // textboxLast
             // 
-            this.textboxLast.Location = new System.Drawing.Point(42, 150);
-            this.textboxLast.Margin = new System.Windows.Forms.Padding(6);
+            this.textboxLast.Location = new System.Drawing.Point(21, 78);
             this.textboxLast.Name = "textboxLast";
-            this.textboxLast.Size = new System.Drawing.Size(196, 31);
+            this.textboxLast.Size = new System.Drawing.Size(100, 20);
             this.textboxLast.TabIndex = 3;
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(46, 217);
-            this.lblID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblID.Location = new System.Drawing.Point(23, 113);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(56, 25);
+            this.lblID.Size = new System.Drawing.Size(31, 13);
             this.lblID.TabIndex = 4;
             this.lblID.Text = "ID #:";
             // 
             // textboxID
             // 
-            this.textboxID.Location = new System.Drawing.Point(42, 250);
-            this.textboxID.Margin = new System.Windows.Forms.Padding(6);
+            this.textboxID.Location = new System.Drawing.Point(21, 130);
             this.textboxID.Name = "textboxID";
-            this.textboxID.Size = new System.Drawing.Size(196, 31);
+            this.textboxID.Size = new System.Drawing.Size(100, 20);
             this.textboxID.TabIndex = 5;
             // 
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(46, 315);
-            this.lblLevel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblLevel.Location = new System.Drawing.Point(23, 164);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(70, 25);
+            this.lblLevel.Size = new System.Drawing.Size(36, 13);
             this.lblLevel.TabIndex = 6;
             this.lblLevel.Text = "Level:";
             // 
@@ -116,18 +110,16 @@
             "Sophomore",
             "Junior",
             "Senior"});
-            this.comboLevel.Location = new System.Drawing.Point(42, 346);
-            this.comboLevel.Margin = new System.Windows.Forms.Padding(6);
+            this.comboLevel.Location = new System.Drawing.Point(21, 180);
             this.comboLevel.Name = "comboLevel";
-            this.comboLevel.Size = new System.Drawing.Size(238, 33);
+            this.comboLevel.Size = new System.Drawing.Size(121, 21);
             this.comboLevel.TabIndex = 7;
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(42, 421);
-            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAddStudent.Location = new System.Drawing.Point(21, 219);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(180, 44);
+            this.btnAddStudent.Size = new System.Drawing.Size(90, 23);
             this.btnAddStudent.TabIndex = 8;
             this.btnAddStudent.Text = "Save Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
@@ -135,10 +127,9 @@
             // 
             // btnEditStudent
             // 
-            this.btnEditStudent.Location = new System.Drawing.Point(42, 477);
-            this.btnEditStudent.Margin = new System.Windows.Forms.Padding(6);
+            this.btnEditStudent.Location = new System.Drawing.Point(21, 248);
             this.btnEditStudent.Name = "btnEditStudent";
-            this.btnEditStudent.Size = new System.Drawing.Size(180, 44);
+            this.btnEditStudent.Size = new System.Drawing.Size(90, 23);
             this.btnEditStudent.TabIndex = 9;
             this.btnEditStudent.Text = "Edit Student";
             this.btnEditStudent.UseVisualStyleBackColor = true;
@@ -146,10 +137,9 @@
             // 
             // btnDeleteStudent
             // 
-            this.btnDeleteStudent.Location = new System.Drawing.Point(42, 535);
-            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(6);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(21, 278);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(180, 44);
+            this.btnDeleteStudent.Size = new System.Drawing.Size(90, 23);
             this.btnDeleteStudent.TabIndex = 10;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
@@ -158,29 +148,36 @@
             // lblStudents
             // 
             this.lblStudents.AutoSize = true;
-            this.lblStudents.Location = new System.Drawing.Point(478, 17);
-            this.lblStudents.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblStudents.Location = new System.Drawing.Point(239, 9);
             this.lblStudents.Name = "lblStudents";
-            this.lblStudents.Size = new System.Drawing.Size(103, 25);
+            this.lblStudents.Size = new System.Drawing.Size(52, 13);
             this.lblStudents.TabIndex = 12;
             this.lblStudents.Text = "Students:";
             // 
             // listBoxStudents
             // 
             this.listBoxStudents.FormattingEnabled = true;
-            this.listBoxStudents.ItemHeight = 25;
-            this.listBoxStudents.Location = new System.Drawing.Point(484, 58);
-            this.listBoxStudents.Margin = new System.Windows.Forms.Padding(6);
+            this.listBoxStudents.Location = new System.Drawing.Point(242, 30);
             this.listBoxStudents.Name = "listBoxStudents";
-            this.listBoxStudents.Size = new System.Drawing.Size(416, 279);
+            this.listBoxStudents.Size = new System.Drawing.Size(210, 147);
             this.listBoxStudents.TabIndex = 13;
+            this.listBoxStudents.SelectedIndexChanged += new System.EventHandler(this.listBoxStudents_SelectedIndexChanged);
             this.listBoxStudents.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxStudents_MouseDoubleClick);
+            // 
+            // lblStudentInfo
+            // 
+            this.lblStudentInfo.AutoSize = true;
+            this.lblStudentInfo.Location = new System.Drawing.Point(242, 208);
+            this.lblStudentInfo.Name = "lblStudentInfo";
+            this.lblStudentInfo.Size = new System.Drawing.Size(0, 13);
+            this.lblStudentInfo.TabIndex = 14;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 652);
+            this.ClientSize = new System.Drawing.Size(514, 339);
+            this.Controls.Add(this.lblStudentInfo);
             this.Controls.Add(this.listBoxStudents);
             this.Controls.Add(this.lblStudents);
             this.Controls.Add(this.btnDeleteStudent);
@@ -195,7 +192,6 @@
             this.Controls.Add(this.textboxFirst);
             this.Controls.Add(this.lblFirst);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Student Record";
             this.ResumeLayout(false);
@@ -218,6 +214,7 @@
         private System.Windows.Forms.Button btnDeleteStudent;
         private System.Windows.Forms.Label lblStudents;
         private System.Windows.Forms.ListBox listBoxStudents;
+        private System.Windows.Forms.Label lblStudentInfo;
     }
 }
 

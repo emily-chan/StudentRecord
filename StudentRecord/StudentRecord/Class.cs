@@ -16,10 +16,13 @@ namespace StudentRecord
             className = "";
             classNumber = "";
         }
-
-
-        public string displayClass { get { return  className + "(" + classNumber+ ")"; } }
-
-    }
         
+        public string displayClass
+        {
+            get
+            {
+                return className + " " + classNumber;
+            }
+        }
+    }
 }

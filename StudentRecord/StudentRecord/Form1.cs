@@ -25,18 +25,20 @@ namespace StudentRecord
             //LoadRecord();
             Thread t = new Thread(new ThreadStart(StartForm));
             t.Start();
-            Thread.Sleep(5000)
+            Thread.Sleep(5000);
             InitializeComponent();
             t.Abort();
 
-            Combo();
+            //Combo();
             
             BindListBox();
         }
+        /*
         public void Combo()//use when running 
         {
             gradeLevel.Items.AddRange(new object[] { "Freshman", "Sophomore", "Junior", "Senior" });
         }
+        */
 
         public void StartForm()
         {
@@ -108,6 +110,15 @@ namespace StudentRecord
             //WriteRecord();
 
         }
+
+        private void listBoxStudents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxStudents.SelectedIndex > -1)
+            {
+                lblStudentInfo.Text = students[listBoxStudents.SelectedIndex].studentInfo;
+            }
+        }
+
         //to open form 2
         private void listBoxStudents_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -154,34 +165,36 @@ namespace StudentRecord
             //WriteRecord();
         }
 
+        
+
 
         //serialization part
         //i don't know to serialize a dictionary
 
-      /* public static void WriteRecord()
-        {
-            //serialization-xml
-            XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Student>));
-            TextWriter writer = new StreamWriter("serialized.xml");
-            serializerW.Serialize(writer, students);
-            writer.Close();
-        }
-        public static void LoadRecord()
-        {
-            try
-            {
-                //deserialization-xml
-               XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
-               TextReader reader = new StreamReader("serialized.xml");
-                students = (BindingList<Student>)serializerR.Deserialize(reader);
-                reader.Close();
-            }
-            catch (FileNotFoundException e)
-            {
-                Console.WriteLine("Error");
-            }
-        }*/
+        /* public static void WriteRecord()
+          {
+              //serialization-xml
+              XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Student>));
+              TextWriter writer = new StreamWriter("serialized.xml");
+              serializerW.Serialize(writer, students);
+              writer.Close();
+          }
+          public static void LoadRecord()
+          {
+              try
+              {
+                  //deserialization-xml
+                 XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
+                 TextReader reader = new StreamReader("serialized.xml");
+                  students = (BindingList<Student>)serializerR.Deserialize(reader);
+                  reader.Close();
+              }
+              catch (FileNotFoundException e)
+              {
+                  Console.WriteLine("Error");
+              }
+          }*/
 
-       
+
     }
 }

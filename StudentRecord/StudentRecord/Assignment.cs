@@ -10,9 +10,18 @@ namespace StudentRecord
     {
         public string assignmentName;
         public string category;
+        public string weight;
         public string pointsReceived;
         public string totalPoints;
         public double percentage;
+
+        public string displayCategory
+        {
+            get
+            {
+                return category + ": " + weight + "%";
+            }
+        }
 
         public double calculatePercentage(string pointsReceived, string totalPoints)
         {
