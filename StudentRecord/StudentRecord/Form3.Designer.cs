@@ -54,6 +54,7 @@
             this.lblc1 = new System.Windows.Forms.Label();
             this.lblGPA = new System.Windows.Forms.Label();
             this.lblGPAResult = new System.Windows.Forms.Label();
+            this.lbltotalCredits = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblClass2
@@ -449,11 +450,20 @@
             this.lblGPAResult.Size = new System.Drawing.Size(0, 25);
             this.lblGPAResult.TabIndex = 26;
             // 
+            // lbltotalCredits
+            // 
+            this.lbltotalCredits.AutoSize = true;
+            this.lbltotalCredits.Location = new System.Drawing.Point(699, 633);
+            this.lbltotalCredits.Name = "lbltotalCredits";
+            this.lbltotalCredits.Size = new System.Drawing.Size(0, 25);
+            this.lbltotalCredits.TabIndex = 27;
+            // 
             // GPACalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 908);
+            this.Controls.Add(this.lbltotalCredits);
             this.Controls.Add(this.lblGPAResult);
             this.Controls.Add(this.lblc1);
             this.Controls.Add(this.btnCalcGPA);
@@ -515,5 +525,6 @@
         private System.Windows.Forms.Label lblc1;
         private System.Windows.Forms.Label lblGPA;
         private System.Windows.Forms.Label lblGPAResult;
+        private System.Windows.Forms.Label lbltotalCredits;
     }
 }

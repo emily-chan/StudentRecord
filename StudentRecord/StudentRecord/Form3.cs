@@ -24,7 +24,6 @@ namespace StudentRecord
           
                 int c1, c2, c3, c4, c5, c6, c7;
                 String g1, g2, g3, g4, g5, g6, g7;
-                int totalClasses = 0;
                 double Gpa = 0.0;
 
                 //convert credits to int value
@@ -43,7 +42,6 @@ namespace StudentRecord
                 {
                     totalCredits = totalCredits + c;
                 }
-
 
 
                 //convert grades to string
@@ -121,6 +119,7 @@ namespace StudentRecord
                     Gpa = finalScore / totalCredits;
                 }
                 lblGPAResult.Text = Gpa.ToString("0.0");
+            lbltotalCredits.Text = c1.ToString();
         }
 
         }
