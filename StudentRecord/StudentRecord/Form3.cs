@@ -21,108 +21,108 @@ namespace StudentRecord
 
         private void btnCalcGPA_Click(object sender, EventArgs e)
         {
-            int c1, c2, c3, c4, c5, c6, c7;
-            String g1, g2, g3, g4, g5, g6, g7;
-            int totalClasses = 0;
-            double Gpa = 0.0;
+          
+                int c1, c2, c3, c4, c5, c6, c7;
+                String g1, g2, g3, g4, g5, g6, g7;
+                int totalClasses = 0;
+                double Gpa = 0.0;
 
-            //convert credits to int value
-            c1 = int.Parse(comboBoxC1.SelectedIndex.ToString());
-            c2 = int.Parse(comboBoxC2.SelectedIndex.ToString());
-            c3 = int.Parse(comboBoxC3.SelectedIndex.ToString());
-            c4 = int.Parse(comboBoxC4.SelectedIndex.ToString());
-            c5 = int.Parse(comboBoxC5.SelectedIndex.ToString());
-            c6 = int.Parse(comboBoxC6.SelectedIndex.ToString());
-            c7 = int.Parse(comboBoxC7.SelectedIndex.ToString());
+                //convert credits to int value
+                c1 = int.Parse(comboBoxC1.SelectedIndex.ToString());
+                c2 = int.Parse(comboBoxC2.SelectedIndex.ToString());
+                c3 = int.Parse(comboBoxC3.SelectedIndex.ToString());
+                c4 = int.Parse(comboBoxC4.SelectedIndex.ToString());
+                c5 = int.Parse(comboBoxC5.SelectedIndex.ToString());
+                c6 = int.Parse(comboBoxC6.SelectedIndex.ToString());
+                c7 = int.Parse(comboBoxC7.SelectedIndex.ToString());
 
-            g1 = comboBoxG1.SelectedIndex.ToString();
-            g2 = comboBoxG2.SelectedIndex.ToString();
-            g3 = comboBoxG3.SelectedIndex.ToString();
-            g4 = comboBoxG4.SelectedIndex.ToString();
-            g5 = comboBoxG5.SelectedIndex.ToString();
-            g6 = comboBoxG6.SelectedIndex.ToString();
-            g7 = comboBoxG7.SelectedIndex.ToString();
+                //calculate total credits
+                int[] credits = { c1, c2, c3, c4, c5, c6, c7 };
+                int totalCredits = 0;
+                foreach (int c in credits)
+                {
+                    totalCredits = totalCredits + c;
+                }
 
-            String[] grades = { g1, g2, g3, g4, g5, g6, g7};
+
+
+                //convert grades to string
+                g1 = comboBoxG1.SelectedIndex.ToString();
+                g2 = comboBoxG2.SelectedIndex.ToString();
+                g3 = comboBoxG3.SelectedIndex.ToString();
+                g4 = comboBoxG4.SelectedIndex.ToString();
+                g5 = comboBoxG5.SelectedIndex.ToString();
+                g6 = comboBoxG6.SelectedIndex.ToString();
+                g7 = comboBoxG7.SelectedIndex.ToString();
+
+                String[] grades = { g1, g2, g3, g4, g5, g6, g7 };
 
 
                 double score = 0.0;
                 double totalScore = 0.0;
-                foreach (String grade in grades)
+                foreach (var grade in grades)
                 {
-                    if (grade == "A +")
+                    if (grade == "A+")
                     {
-                        score += 4.0;
+                        score = 4.0;
                     }
 
-                    else if (grade == "A ")
+                    else if (grade == "A")
                     {
-                        score += 4.0;
+                        score = 4.0;
                     }
-                    else if (grade == "A -")
+                    else if (grade == "A-")
                     {
-                        score += 3.7;
+                        score = 3.7;
                     }
-                    else if (grade == "B +")
+                    else if (grade == "B+")
                     {
-                        score += 3.3;
+                        score = 3.3;
                     }
-                    else if (grade == "B ")
+                    else if (grade == "B")
                     {
-                        score += 3.0;
+                        score = 3.0;
                     }
-                    else if (grade == "B -")
+                    else if (grade == "B-")
                     {
-                        score += 2.7;
+                        score = 2.7;
                     }
-                    else if (grade == "C +")
+                    else if (grade == "C+")
                     {
-                        score += 2.3;
+                        score = 2.3;
                     }
-                    else if (grade == "C ")
+                    else if (grade == "C")
                     {
-                        score += 2.0;
+                        score = 2.0;
                     }
-                    else if (grade == "C -")
+                    else if (grade == "C-")
                     {
-                        score += 1.7;
+                        score = 1.7;
                     }
-                    else if (grade == "D +")
+                    else if (grade == "D+")
                     {
-                        score += 1.3;
+                        score = 1.3;
                     }
-                    else if (grade == "D ")
+                    else if (grade == "D")
                     {
-                        score += 1.0;
+                        score = 1.0;
                     }
-                    else if (grade == "F ")
+                    else if (grade == "F")
                     {
-                        score += 0.0;
+                        score = 0.0;
                     }
 
                     totalScore = totalScore + score;
+                    double finalScore = 0;
+                    finalScore = totalScore * totalCredits;
 
-                for(int i = 1; i < grades.Length; i++)
-                {
-                    totalClasses += 1; 
-                   
+
+
+                    Gpa = finalScore / totalCredits;
                 }
-
-                Gpa = totalScore / totalClasses; 
-
-
-               
-                }
-
-            lblGPAResult.Text = Gpa.ToString("0.0"); 
-
-
-
-
-            
-
-       
+                lblGPAResult.Text = Gpa.ToString("0.0");
         }
 
+        }
     }
-}
+

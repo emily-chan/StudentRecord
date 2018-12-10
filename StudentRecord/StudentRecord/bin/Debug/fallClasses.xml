@@ -1,11 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Class>
-    <className>cs</className>
-    <classNumber>236</classNumber>
-  </Class>
-  <Class>
-    <className>cs</className>
-    <classNumber>350</classNumber>
-  </Class>
-</ArrayOfClass>
+<ArrayOfClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
