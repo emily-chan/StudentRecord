@@ -56,6 +56,7 @@
             this.btnGpaCalculator = new System.Windows.Forms.Button();
             this.lblClassInfo = new System.Windows.Forms.Label();
             this.listBoxCategories = new System.Windows.Forms.ListBox();
+            this.btnFinalGradeCalc = new System.Windows.Forms.Button();
             this.tabControlClass.SuspendLayout();
             this.tabFall.SuspendLayout();
             this.tabSpring.SuspendLayout();
@@ -324,11 +325,22 @@
             this.listBoxCategories.Size = new System.Drawing.Size(191, 121);
             this.listBoxCategories.TabIndex = 35;
             // 
+            // btnFinalGradeCalc
+            // 
+            this.btnFinalGradeCalc.Location = new System.Drawing.Point(33, 603);
+            this.btnFinalGradeCalc.Name = "btnFinalGradeCalc";
+            this.btnFinalGradeCalc.Size = new System.Drawing.Size(286, 35);
+            this.btnFinalGradeCalc.TabIndex = 36;
+            this.btnFinalGradeCalc.Text = "Final Grade Calculator";
+            this.btnFinalGradeCalc.UseVisualStyleBackColor = true;
+            this.btnFinalGradeCalc.Click += new System.EventHandler(this.btnFinalGradeCalc_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 604);
+            this.ClientSize = new System.Drawing.Size(514, 674);
+            this.Controls.Add(this.btnFinalGradeCalc);
             this.Controls.Add(this.listBoxCategories);
             this.Controls.Add(this.lblClassInfo);
             this.Controls.Add(this.btnGpaCalculator);
@@ -393,5 +405,6 @@
         private System.Windows.Forms.Button btnGpaCalculator;
         private System.Windows.Forms.Label lblClassInfo;
         private System.Windows.Forms.ListBox listBoxCategories;
+        private System.Windows.Forms.Button btnFinalGradeCalc;
     }
 }

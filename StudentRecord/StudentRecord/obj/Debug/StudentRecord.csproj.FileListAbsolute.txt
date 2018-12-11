@@ -43,3 +43,4 @@ C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\D
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.GPACalculator.resources
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentDatabase.mdf
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentDatabase_log.ldf
+C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.FinalGradeCalc.resources

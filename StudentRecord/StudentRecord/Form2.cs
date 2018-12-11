@@ -264,6 +264,12 @@ namespace StudentRecord
             GPACalculator f3 = new GPACalculator();
             f3.Show();
         }
+
+        private void btnFinalGradeCalc_Click(object sender, EventArgs e)
+        {
+            FinalGradeCalc f5 = new FinalGradeCalc();
+            f5.Show();
+        }
     }
 }
 
