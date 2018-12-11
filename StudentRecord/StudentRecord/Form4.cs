@@ -14,26 +14,29 @@ namespace StudentRecord
 {
     public partial class Form4 : Form
     {
-        static BindingList<Assignment> assignments = new BindingList<Assignment>();
+        public static BindingList<Assignment> assignments = new BindingList<Assignment>();
         
         public Form4()
         {
            
-            LoadRecord();
+            //LoadRecord();
             InitializeComponent();
             BindListBox();
         }
         private void BindListBox()
         {
+            listBoxAssignments.DataSource = assignments;
+            listBoxAssignments.DisplayMember = "displayAssignments";
             //dataGridAssignments.DataSource = assignments;
             //dataGridAssignments.ColumnAsg = "displayAssignmentName";
         }
         //add Assignment
-        
+
         private void btnAA_Click(object sender, EventArgs e)
         {
+            string category = comboBoxCategory.Items[comboBoxCategory.SelectedIndex].ToString();
 
-            if (comboBoxCategory.SelectedIndex == 0)
+            if (category.Equals("Homework"))
             {
                 assignments.Add(new Assignment()
                 {
@@ -44,9 +47,9 @@ namespace StudentRecord
                     //percentage = calculatePercentage()
 
                 });
-            }
 
-            else if (comboBoxCategory.SelectedIndex == 1)
+            }
+            else if (category.Equals("Participation"))
             {
 
                 assignments.Add(new Assignment()
@@ -59,7 +62,7 @@ namespace StudentRecord
                 });
 
             }
-            else if (comboBoxCategory.SelectedIndex == 2)
+            else if (category.Equals("Midterm"))
             {
 
                 assignments.Add(new Assignment()
@@ -72,7 +75,7 @@ namespace StudentRecord
                 });
 
             }
-            else if (comboBoxCategory.SelectedIndex == 3)
+            else if (category.Equals("Quizzes"))
             {
 
                 assignments.Add(new Assignment()
@@ -86,7 +89,7 @@ namespace StudentRecord
 
             }
 
-            else if (comboBoxCategory.SelectedIndex == 4)
+            else if (category.Equals("Final"))
             {
 
                 assignments.Add(new Assignment()
@@ -99,7 +102,7 @@ namespace StudentRecord
                 });
 
             }
-            else if (comboBoxCategory.SelectedIndex == 5)
+            else if (category.Equals("Projects"))
             {
 
                 assignments.Add(new Assignment()
@@ -112,7 +115,7 @@ namespace StudentRecord
                 });
 
             }
-            WriteRecord();
+            //WriteRecord();
         }
 
         private void btnEA_Click(object sender, EventArgs e)
@@ -125,12 +128,12 @@ namespace StudentRecord
 
 
 
-            WriteRecord();
+            //WriteRecord();
         }
 
         //serialization part
 
-
+            /*
         public static void WriteRecord()
         {
             //serialization-xml
@@ -154,6 +157,7 @@ namespace StudentRecord
                 Console.WriteLine("Error");
             }
         }
+        */
 
         
     }

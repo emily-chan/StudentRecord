@@ -104,7 +104,7 @@
             this.btnAddClass.Location = new System.Drawing.Point(29, 436);
             this.btnAddClass.Name = "btnAddClass";
             this.btnAddClass.Size = new System.Drawing.Size(75, 23);
-            this.btnAddClass.TabIndex = 4;
+            this.btnAddClass.TabIndex = 9;
             this.btnAddClass.Text = "Add Class";
             this.btnAddClass.UseVisualStyleBackColor = true;
             this.btnAddClass.Click += new System.EventHandler(this.btnAddClass_Click);
@@ -114,7 +114,7 @@
             this.btnDeleteClass.Location = new System.Drawing.Point(110, 436);
             this.btnDeleteClass.Name = "btnDeleteClass";
             this.btnDeleteClass.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteClass.TabIndex = 5;
+            this.btnDeleteClass.TabIndex = 10;
             this.btnDeleteClass.Text = "Delete Class";
             this.btnDeleteClass.UseVisualStyleBackColor = true;
             this.btnDeleteClass.Click += new System.EventHandler(this.btnDeleteClass_Click);
@@ -174,7 +174,7 @@
             this.btnEditClass.Location = new System.Drawing.Point(29, 474);
             this.btnEditClass.Name = "btnEditClass";
             this.btnEditClass.Size = new System.Drawing.Size(75, 23);
-            this.btnEditClass.TabIndex = 7;
+            this.btnEditClass.TabIndex = 11;
             this.btnEditClass.Text = "Edit Class";
             this.btnEditClass.UseVisualStyleBackColor = true;
             // 
@@ -183,9 +183,10 @@
             this.btnFinish.Location = new System.Drawing.Point(110, 474);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(75, 23);
-            this.btnFinish.TabIndex = 8;
+            this.btnFinish.TabIndex = 12;
             this.btnFinish.Text = "Finish";
             this.btnFinish.UseVisualStyleBackColor = true;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // lblYear
             // 
@@ -201,7 +202,7 @@
             this.textBoxYear.Location = new System.Drawing.Point(62, 62);
             this.textBoxYear.Name = "textBoxYear";
             this.textBoxYear.Size = new System.Drawing.Size(57, 20);
-            this.textBoxYear.TabIndex = 13;
+            this.textBoxYear.TabIndex = 2;
             // 
             // lblClassNumber
             // 
@@ -217,7 +218,7 @@
             this.textBoxNumber.Location = new System.Drawing.Point(30, 169);
             this.textBoxNumber.Name = "textBoxNumber";
             this.textBoxNumber.Size = new System.Drawing.Size(121, 20);
-            this.textBoxNumber.TabIndex = 15;
+            this.textBoxNumber.TabIndex = 4;
             // 
             // label1
             // 
@@ -233,7 +234,7 @@
             this.btnDeleteCategory.Location = new System.Drawing.Point(29, 370);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
             this.btnDeleteCategory.Size = new System.Drawing.Size(110, 23);
-            this.btnDeleteCategory.TabIndex = 31;
+            this.btnDeleteCategory.TabIndex = 8;
             this.btnDeleteCategory.Text = "Delete Category";
             this.btnDeleteCategory.UseVisualStyleBackColor = true;
             this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
@@ -261,14 +262,14 @@
             this.textBoxWeight.Location = new System.Drawing.Point(30, 304);
             this.textBoxWeight.Name = "textBoxWeight";
             this.textBoxWeight.Size = new System.Drawing.Size(109, 20);
-            this.textBoxWeight.TabIndex = 25;
+            this.textBoxWeight.TabIndex = 6;
             // 
             // btnAddCategory
             // 
             this.btnAddCategory.Location = new System.Drawing.Point(30, 341);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(109, 23);
-            this.btnAddCategory.TabIndex = 24;
+            this.btnAddCategory.TabIndex = 7;
             this.btnAddCategory.Text = "Add Category";
             this.btnAddCategory.UseVisualStyleBackColor = true;
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
@@ -287,7 +288,7 @@
             this.comboBoxCategory.Location = new System.Drawing.Point(30, 244);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(109, 21);
-            this.comboBoxCategory.TabIndex = 23;
+            this.comboBoxCategory.TabIndex = 5;
             // 
             // lblCategory
             // 
@@ -304,7 +305,7 @@
             this.btnGpaCalculator.Margin = new System.Windows.Forms.Padding(2);
             this.btnGpaCalculator.Name = "btnGpaCalculator";
             this.btnGpaCalculator.Size = new System.Drawing.Size(286, 32);
-            this.btnGpaCalculator.TabIndex = 32;
+            this.btnGpaCalculator.TabIndex = 13;
             this.btnGpaCalculator.Text = "Go to GPA calculator";
             this.btnGpaCalculator.UseVisualStyleBackColor = true;
             this.btnGpaCalculator.Click += new System.EventHandler(this.btnGpaCalculator_Click);
@@ -330,7 +331,7 @@
             this.btnFinalGradeCalc.Location = new System.Drawing.Point(33, 603);
             this.btnFinalGradeCalc.Name = "btnFinalGradeCalc";
             this.btnFinalGradeCalc.Size = new System.Drawing.Size(286, 35);
-            this.btnFinalGradeCalc.TabIndex = 36;
+            this.btnFinalGradeCalc.TabIndex = 14;
             this.btnFinalGradeCalc.Text = "Final Grade Calculator";
             this.btnFinalGradeCalc.UseVisualStyleBackColor = true;
             this.btnFinalGradeCalc.Click += new System.EventHandler(this.btnFinalGradeCalc_Click);
