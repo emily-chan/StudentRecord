@@ -171,29 +171,29 @@ namespace StudentRecord
         //serialization part
         //i don't know to serialize a dictionary
 
-        /* public static void WriteRecord()
-          {
-              //serialization-xml
-              XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Student>));
-              TextWriter writer = new StreamWriter("serialized.xml");
-              serializerW.Serialize(writer, students);
-              writer.Close();
-          }
-          public static void LoadRecord()
-          {
-              try
-              {
-                  //deserialization-xml
-                 XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
-                 TextReader reader = new StreamReader("serialized.xml");
-                  students = (BindingList<Student>)serializerR.Deserialize(reader);
-                  reader.Close();
-              }
-              catch (FileNotFoundException e)
-              {
-                  Console.WriteLine("Error");
-              }
-          }*/
+        public static void WriteRecord()
+        {
+            //serialization-xml
+            XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Student>));
+            TextWriter writer = new StreamWriter("form1.xml");
+            serializerW.Serialize(writer, students);
+            writer.Close();
+        }
+        public static void LoadRecord()
+        {
+            try
+            {
+                //deserialization-xml
+                XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
+                TextReader reader = new StreamReader("form1.xml");
+                students = (BindingList<Student>)serializerR.Deserialize(reader);
+                reader.Close();
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("Error");
+            }
+        }
 
 
     }

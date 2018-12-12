@@ -15,7 +15,7 @@ namespace StudentRecord
         public string level;
         //terms and semesters that they had.
         //disctionary, a term as its key, and as its value a dictionary the key the 
-        public Dictionary<Term, List<Class>> studentClasses = new Dictionary<Term, List<Class>>();
+        //public Dictionary<Term, List<Class>> studentClasses = new Dictionary<Term, List<Class>>();
 
         public Student()
         {

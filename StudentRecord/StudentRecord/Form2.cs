@@ -70,7 +70,7 @@ namespace StudentRecord
                     classNumber = textBoxNumber.Text
                 };
                 fallClasses.Add(c);
-
+                /*
                 if (Form1.students[studentIdx].studentClasses.ContainsKey(t))
                 {
                     Form1.students[studentIdx].studentClasses[t].Add(c);
@@ -79,7 +79,7 @@ namespace StudentRecord
                 {
                     Form1.students[studentIdx].studentClasses.Add(t, new List<Class>());
                     Form1.students[studentIdx].studentClasses[t].Add(c);
-                }
+                }*/
                 tabControlClass.SelectedTab = tabFall;
             }
             else if (term.Equals("Spring"))
@@ -95,7 +95,7 @@ namespace StudentRecord
                     classNumber = textBoxNumber.Text
                 };
                 springClasses.Add(c);
-
+                /*
                 if (Form1.students[studentIdx].studentClasses.ContainsKey(t))
                 {
                     Form1.students[studentIdx].studentClasses[t].Add(c);
@@ -104,7 +104,7 @@ namespace StudentRecord
                 {
                     Form1.students[studentIdx].studentClasses.Add(t, new List<Class>());
                     Form1.students[studentIdx].studentClasses[t].Add(c);
-                }
+                }*/
                 tabControlClass.SelectedTab = tabSpring;
             }
 
