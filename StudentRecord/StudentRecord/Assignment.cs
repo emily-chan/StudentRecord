@@ -23,6 +23,14 @@ namespace StudentRecord
             }
         }
 
+        public string displayAssignment
+        {
+            get
+            {
+                return category + " - " + weight + "%" + assignmentName + ": " + calculatePercentage(pointsReceived, totalPoints);
+            }
+        }
+
         public double calculatePercentage(string pointsReceived, string totalPoints)
         {
             double points = Convert.ToDouble(pointsReceived);

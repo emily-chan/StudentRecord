@@ -225,6 +225,7 @@ namespace StudentRecord
             }
         }
 
+        
         //serialization part
         public static void WriteRecord()
         {
@@ -269,6 +270,12 @@ namespace StudentRecord
         {
             FinalGradeCalc f5 = new FinalGradeCalc();
             f5.Show();
+        }
+
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.Show();
         }
     }
 }
