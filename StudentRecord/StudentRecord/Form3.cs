@@ -20,10 +20,10 @@ namespace StudentRecord
         }
 
         // calculate grade weight
-        // weight = credit amount/total number of credits
-        public double CalcWeight(double weight, int total)
+         //weight = credit amount/total number of credits
+        public double? CalcWeight(double? weight, double? total)
         {
-            double gradeWeight = weight / total;
+            double? gradeWeight = weight / total;
             return gradeWeight;
         }
 
@@ -80,9 +80,9 @@ namespace StudentRecord
         private void btnCalcGPA_Click(object sender, EventArgs e)
         {
             int c1, c2, c3, c4, c5, c6, c7; // credits from combobox
-            double w1, w2, w3, w4, w5, w6, w7; // weight of credits
+            double? w1, w2, w3, w4, w5, w6, w7; // weight of credits
             String g1, g2, g3, g4, g5, g6, g7; // grades from combobox
-            double Gpa = 0.0;
+            double? Gpa = 0.0;
 
             //convert credits to int value
             c1 = int.Parse(comboBoxC1.SelectedIndex.ToString());
@@ -94,13 +94,23 @@ namespace StudentRecord
             c7 = int.Parse(comboBoxC7.SelectedIndex.ToString());
 
             //calculate total credits
-            int[] credits = { c1, c2, c3, c4, c5, c6, c7 };
-            
-            int totalCredits = 0;
-            foreach (int c in credits)
+            //int[] credits = { c1, c2, c3, c4, c5, c6, c7 };
+            var credits = new List<double?> { c1, c2, c3, c4, c5, c6, c7};
+            /*credits.Add(c1);
+            credits.Add(c2);
+            credits.Add(c3);
+            credits.Add(c4);
+            credits.Add(c5);
+            credits.Add(c6);
+            credits.Add(c7);*/
+
+            double? totalCredits = credits.Sum();
+
+            //int totalCredits = 0;
+           /* foreach (int c in credits)
             {
                 totalCredits = totalCredits + c;
-            }
+            }*/
             
             w1 = c1 / totalCredits;
             w2 = c2 / totalCredits;
@@ -109,9 +119,19 @@ namespace StudentRecord
             w5 = c5 / totalCredits;
             w6 = c6 / totalCredits;
             w7 = c7 / totalCredits;
-            
-            double[] weights = { w1, w2, w3, w4, w5, w6, w7 };
-            
+
+            var weights = new List<double?> { w1, w2, w3, w4, w5, w6, w7 };
+
+            /*List<double> weights = new List<double>();
+            weights.Add(w1);
+            weights.Add(w2);
+            weights.Add(w3);
+            weights.Add(w4);
+            weights.Add(w5);
+            weights.Add(w6);
+            weights.Add(w7);*/
+
+
             //convert grades to string
             g1 = comboBoxG1.SelectedIndex.ToString();
             g2 = comboBoxG2.SelectedIndex.ToString();
@@ -121,14 +141,24 @@ namespace StudentRecord
             g6 = comboBoxG6.SelectedIndex.ToString();
             g7 = comboBoxG7.SelectedIndex.ToString();
 
-            String[] grades = { g1, g2, g3, g4, g5, g6, g7 };
+           // String[] grades = { g1, g2, g3, g4, g5, g6, g7 };
+            List<String> grades = new List<String>();
+
+
+            grades.Add(g1);
+            grades.Add(g2);
+            grades.Add(g3);
+            grades.Add(g4);
+            grades.Add(g5);
+            grades.Add(g6);
+            grades.Add(g7);
 
             double score = 0.0;
-            double gradeWeight = 0.0;
-            double totalWeight = 0.0; 
-            double totalScore = 0.0;
+            double? gradeWeight = 0.0;
+            double? totalWeight = 0.0; 
+            //double totalScore = 0.0;
           
-            foreach(double w in weights)
+            foreach(double? w in weights)
             {
                 gradeWeight = CalcWeight(w, totalCredits);
                 
@@ -143,27 +173,7 @@ namespace StudentRecord
 
             //double finalScore = 0;
             //finalScore = totalScore * totalCredits;
-            Console.WriteLine(c1);
-            Console.WriteLine(c2);
-            Console.WriteLine(c3);
-            Console.WriteLine(c4);
-            Console.WriteLine(c5);
-            Console.WriteLine(c6);
-            Console.WriteLine(c7);
-            Console.WriteLine(w1);
-            Console.WriteLine(w2);
-            Console.WriteLine(w3);
-            Console.WriteLine(w4);
-            Console.WriteLine(w5);
-            Console.WriteLine(w6);
-            Console.WriteLine(w7);
-            Console.WriteLine(g1);
-            Console.WriteLine(g2);
-            Console.WriteLine(g3);
-            Console.WriteLine(g4);
-            Console.WriteLine(g5);
-            Console.WriteLine(g6);
-            Console.WriteLine(g7);
+            
 
 
 
@@ -175,6 +185,8 @@ namespace StudentRecord
             //Gpa = finalScore / totalCredits;
             lblGPAResult.Text = Gpa.ToString();
             lblCredits.Text = totalCredits.ToString();
+
+            lblw1.Text = totalWeight.ToString();
 
         }
     }
