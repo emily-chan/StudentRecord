@@ -33,17 +33,9 @@ namespace StudentRecord
             comboBoxG6.SelectedIndex = 0;
             comboBoxG7.SelectedIndex = 0;
 
-
         }
-
-        // calculate grade weight
-         //weight = credit amount/total number of credits
-        public double CalcWeight(double weight, double total)
-        {
-            double gradeWeight = weight / total;
-            return gradeWeight;
-        }
-
+        
+        // get numeric score based on corresponding letter grade
         public double GetScore(string grade)
         {
             double score = 0.0;
@@ -111,8 +103,6 @@ namespace StudentRecord
             c7 = double.Parse(comboBoxC7.SelectedItem.ToString());
 
             //calculate total credits
-            //double[] credits = { c1, c2, c3, c4, c5, c6, c7 };
-            //var credits = new List<double> { c1, c2, c3, c4, c5, c6, c7};
             List<double> credits = new List<double>();
             credits.Add(c1);
             credits.Add(c2);
@@ -123,13 +113,8 @@ namespace StudentRecord
             credits.Add(c7);
 
             double totalCredits = credits.Sum();
-
-            //int totalCredits = 0;
-            /*foreach (int c in credits)
-            {
-                totalCredits = totalCredits + c;
-            }*/
             
+            // find weight of each class
             w1 = c1 / totalCredits;
             w2 = c2 / totalCredits;
             w3 = c3 / totalCredits;
@@ -137,8 +122,6 @@ namespace StudentRecord
             w5 = c5 / totalCredits;
             w6 = c6 / totalCredits;
             w7 = c7 / totalCredits;
-
-            
 
             List<double> weights = new List<double>();
             weights.Add(w1);
@@ -149,7 +132,6 @@ namespace StudentRecord
             weights.Add(w6);
             weights.Add(w7);
 
-
             //convert grades to string
             g1 = comboBoxG1.SelectedItem.ToString();
             g2 = comboBoxG2.SelectedItem.ToString();
@@ -159,54 +141,37 @@ namespace StudentRecord
             g6 = comboBoxG6.SelectedItem.ToString();
             g7 = comboBoxG7.SelectedItem.ToString();
 
-           //String[] grades = { g1, g2, g3, g4, g5, g6, g7 };
-            List<String> grades = new List<String>();
-
-
-            grades.Add(g1);
-            grades.Add(g2);
-            grades.Add(g3);
-            grades.Add(g4);
-            grades.Add(g5);
-            grades.Add(g6);
-            grades.Add(g7);
-
-            double score = 0.0;
-            double gradeWeight = 0.0;
-            double totalWeight = 0.0; 
-            //double totalScore = 0.0;
-          
-            foreach(double w in weights)
-            {
-                gradeWeight = CalcWeight(w, totalCredits);
-                
-                totalWeight = gradeWeight*score;
-            }
-            Gpa += totalWeight;
-
-                //totalScore = totalScore + score;
-
+            // sum of weighted scores for each class 
             Gpa = (w1 * GetScore(g1)) + (w2 * GetScore(g2)) + (w3 * GetScore(g3)) + (w4 * GetScore(g4)) + (w5 * GetScore(g5)) + (w6 * GetScore(g6)) + (w7 * GetScore(g7));
-
-
-            //double finalScore = 0;
-            //finalScore = totalScore * totalCredits;
             
-
-
-
-
-
-            Console.WriteLine(Gpa);
-           
-
-            //Gpa = finalScore / totalCredits;
             lblGPAResult.Text = Gpa.ToString();
             lblCredits.Text = totalCredits.ToString();
 
-            lblcredit1.Text = c1.ToString();
 
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            comboBoxC1.SelectedIndex = 0;
+            comboBoxC2.SelectedIndex = 0;
+            comboBoxC3.SelectedIndex = 0;
+            comboBoxC4.SelectedIndex = 0;
+            comboBoxC5.SelectedIndex = 0;
+            comboBoxC6.SelectedIndex = 0;
+            comboBoxC7.SelectedIndex = 0;
+
+            comboBoxG1.SelectedIndex = 0;
+            comboBoxG2.SelectedIndex = 0;
+            comboBoxG3.SelectedIndex = 0;
+            comboBoxG4.SelectedIndex = 0;
+            comboBoxG5.SelectedIndex = 0;
+            comboBoxG6.SelectedIndex = 0;
+            comboBoxG7.SelectedIndex = 0;
+
+            lblCredits.Text = "";
+            lblGPAResult.Text = "";
+           
         }
     }
 }
