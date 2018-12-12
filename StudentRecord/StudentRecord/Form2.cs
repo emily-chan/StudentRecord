@@ -20,7 +20,7 @@ namespace StudentRecord
         static BindingList<Class> fallClasses = new BindingList<Class>();
         static BindingList<Class> springClasses = new BindingList<Class>();
         //static BindingList<Class> classes = new BindingList<Class>();
-        static BindingList<Assignment> assignments = new BindingList<Assignment>();
+        static BindingList<Assignment> categories = new BindingList<Assignment>();
 
         static Form1 obj = new Form1();
 
@@ -46,7 +46,7 @@ namespace StudentRecord
             listboxSpring.DataSource = springClasses;
             listboxSpring.DisplayMember = "displayClass";
 
-            listBoxCategories.DataSource = assignments;
+            listBoxCategories.DataSource = categories;
             listBoxCategories.DisplayMember = "displayCategory";
         }
 
@@ -158,61 +158,62 @@ namespace StudentRecord
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            Assignment a;
+            Assignment c;
             string category = comboBoxCategory.Items[comboBoxCategory.SelectedIndex].ToString();
             if (category.Equals("Homework"))
             {
-                a = new Assignment
+                c = new Assignment
                 {
                     category = "Homework",
                     weight = textBoxWeight.Text,
                 };
-                assignments.Add(a);
+                categories.Add(c);
+
             }
             else if (category.Equals("Participation"))
             {
-                a = new Assignment
+                c = new Assignment
                 {
                     category = "Participation",
                     weight = textBoxWeight.Text,
                 };
-                assignments.Add(a);
+                categories.Add(c);
             }
             else if (category.Equals("Midterm"))
             {
-                a = new Assignment
+                c = new Assignment
                 {
                     category = "Midterm",
                     weight = textBoxWeight.Text,
                 };
-                assignments.Add(a);
+                categories.Add(c);
             }
             else if (category.Equals("Quizzes"))
             {
-                a = new Assignment
+                c = new Assignment
                 {
                     category = "Quizzes",
                     weight = textBoxWeight.Text,
                 };
-                assignments.Add(a);
+                categories.Add(c);
             }
             else if (category.Equals("Final"))
             {
-                a = new Assignment
+                c = new Assignment
                 {
                     category = "Final",
                     weight = textBoxWeight.Text,
                 };
-                assignments.Add(a);
+                categories.Add(c);
             }
             else if (category.Equals("Projects"))
             {
-                a = new Assignment
+                c = new Assignment
                 {
                     category = "Projects",
                     weight = textBoxWeight.Text,
                 };
-                assignments.Add(a);
+                categories.Add(c);
             }
             WriteRecord();
         }
@@ -221,7 +222,7 @@ namespace StudentRecord
         {
             if (listBoxCategories.SelectedIndex > -1)
             {
-                assignments.RemoveAt(listBoxCategories.SelectedIndex);
+                categories.RemoveAt(listBoxCategories.SelectedIndex);
             }
         }
 

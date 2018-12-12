@@ -38,7 +38,6 @@
             this.textBoxPtsR = new System.Windows.Forms.TextBox();
             this.btnAA = new System.Windows.Forms.Button();
             this.btnDA = new System.Windows.Forms.Button();
-            this.btnEA = new System.Windows.Forms.Button();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.lblAssignments = new System.Windows.Forms.Label();
@@ -100,7 +99,7 @@
             // 
             // btnAA
             // 
-            this.btnAA.Location = new System.Drawing.Point(8, 193);
+            this.btnAA.Location = new System.Drawing.Point(11, 214);
             this.btnAA.Name = "btnAA";
             this.btnAA.Size = new System.Drawing.Size(108, 23);
             this.btnAA.TabIndex = 8;
@@ -110,23 +109,13 @@
             // 
             // btnDA
             // 
-            this.btnDA.Location = new System.Drawing.Point(9, 251);
+            this.btnDA.Location = new System.Drawing.Point(137, 214);
             this.btnDA.Name = "btnDA";
             this.btnDA.Size = new System.Drawing.Size(108, 23);
             this.btnDA.TabIndex = 9;
             this.btnDA.Text = "Delete Assignment";
             this.btnDA.UseVisualStyleBackColor = true;
             this.btnDA.Click += new System.EventHandler(this.btnDA_Click);
-            // 
-            // btnEA
-            // 
-            this.btnEA.Location = new System.Drawing.Point(9, 222);
-            this.btnEA.Name = "btnEA";
-            this.btnEA.Size = new System.Drawing.Size(108, 23);
-            this.btnEA.TabIndex = 10;
-            this.btnEA.Text = "Edit Assignment";
-            this.btnEA.UseVisualStyleBackColor = true;
-            this.btnEA.Click += new System.EventHandler(this.btnEA_Click);
             // 
             // comboBoxCategory
             // 
@@ -179,7 +168,6 @@
             this.Controls.Add(this.lblAssignments);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.comboBoxCategory);
-            this.Controls.Add(this.btnEA);
             this.Controls.Add(this.btnDA);
             this.Controls.Add(this.btnAA);
             this.Controls.Add(this.textBoxPtsR);
@@ -205,7 +193,6 @@
         private System.Windows.Forms.TextBox textBoxPtsR;
         private System.Windows.Forms.Button btnAA;
         private System.Windows.Forms.Button btnDA;
-        private System.Windows.Forms.Button btnEA;
         private System.Windows.Forms.ComboBox comboBoxCategory;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblAssignments;

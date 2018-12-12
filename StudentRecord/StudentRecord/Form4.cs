@@ -118,15 +118,13 @@ namespace StudentRecord
             //WriteRecord();
         }
 
-        private void btnEA_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnDA_Click(object sender, EventArgs e)
         {
-
-
+            if (listBoxAssignments.SelectedIndex > -1)
+            {
+                assignments.RemoveAt(listBoxAssignments.SelectedIndex);
+            }
 
             //WriteRecord();
         }
