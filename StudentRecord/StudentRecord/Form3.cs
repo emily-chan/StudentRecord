@@ -17,13 +17,21 @@ namespace StudentRecord
         public GPACalculator()
         {
             InitializeComponent();
+            comboBoxC1.SelectedIndex = 0;
+            comboBoxC2.SelectedIndex = 0;
+            comboBoxC3.SelectedIndex = 0;
+            comboBoxC4.SelectedIndex = 0;
+            comboBoxC5.SelectedIndex = 0;
+            comboBoxC6.SelectedIndex = 0;
+            comboBoxC7.SelectedIndex = 0;
+
         }
 
         // calculate grade weight
          //weight = credit amount/total number of credits
-        public double? CalcWeight(double? weight, double? total)
+        public double CalcWeight(double weight, double total)
         {
-            double? gradeWeight = weight / total;
+            double gradeWeight = weight / total;
             return gradeWeight;
         }
 
@@ -79,23 +87,23 @@ namespace StudentRecord
 
         private void btnCalcGPA_Click(object sender, EventArgs e)
         {
-            int c1, c2, c3, c4, c5, c6, c7; // credits from combobox
-            double? w1, w2, w3, w4, w5, w6, w7; // weight of credits
+            double c1, c2, c3, c4, c5, c6, c7; // credits from combobox
+            double w1, w2, w3, w4, w5, w6, w7; // weight of credits
             String g1, g2, g3, g4, g5, g6, g7; // grades from combobox
-            double? Gpa = 0.0;
-
-            //convert credits to int value
-            c1 = int.Parse(comboBoxC1.SelectedIndex.ToString());
-            c2 = int.Parse(comboBoxC2.SelectedIndex.ToString());
-            c3 = int.Parse(comboBoxC3.SelectedIndex.ToString());
-            c4 = int.Parse(comboBoxC4.SelectedIndex.ToString());
-            c5 = int.Parse(comboBoxC5.SelectedIndex.ToString());
-            c6 = int.Parse(comboBoxC6.SelectedIndex.ToString());
-            c7 = int.Parse(comboBoxC7.SelectedIndex.ToString());
+            double Gpa = 0.0;
+             
+            //convert credits to double value
+            c1 = double.Parse(comboBoxC1.SelectedIndex.ToString());
+            c2 = double.Parse(comboBoxC2.SelectedIndex.ToString());
+            c3 = double.Parse(comboBoxC3.SelectedIndex.ToString());
+            c4 = double.Parse(comboBoxC4.SelectedIndex.ToString());
+            c5 = double.Parse(comboBoxC5.SelectedIndex.ToString());
+            c6 = double.Parse(comboBoxC6.SelectedIndex.ToString());
+            c7 = double.Parse(comboBoxC7.SelectedIndex.ToString());
 
             //calculate total credits
-            //int[] credits = { c1, c2, c3, c4, c5, c6, c7 };
-            var credits = new List<double?> { c1, c2, c3, c4, c5, c6, c7};
+            //double[] credits = { c1, c2, c3, c4, c5, c6, c7 };
+            var credits = new List<double> { c1, c2, c3, c4, c5, c6, c7};
             /*credits.Add(c1);
             credits.Add(c2);
             credits.Add(c3);
@@ -104,10 +112,10 @@ namespace StudentRecord
             credits.Add(c6);
             credits.Add(c7);*/
 
-            double? totalCredits = credits.Sum();
+            double totalCredits = credits.Sum();
 
             //int totalCredits = 0;
-           /* foreach (int c in credits)
+            /*foreach (int c in credits)
             {
                 totalCredits = totalCredits + c;
             }*/
@@ -120,7 +128,7 @@ namespace StudentRecord
             w6 = c6 / totalCredits;
             w7 = c7 / totalCredits;
 
-            var weights = new List<double?> { w1, w2, w3, w4, w5, w6, w7 };
+            var weights = new List<double> { w1, w2, w3, w4, w5, w6, w7 };
 
             /*List<double> weights = new List<double>();
             weights.Add(w1);
@@ -154,11 +162,11 @@ namespace StudentRecord
             grades.Add(g7);
 
             double score = 0.0;
-            double? gradeWeight = 0.0;
-            double? totalWeight = 0.0; 
+            double gradeWeight = 0.0;
+            double totalWeight = 0.0; 
             //double totalScore = 0.0;
           
-            foreach(double? w in weights)
+            foreach(double w in weights)
             {
                 gradeWeight = CalcWeight(w, totalCredits);
                 
@@ -186,7 +194,8 @@ namespace StudentRecord
             lblGPAResult.Text = Gpa.ToString();
             lblCredits.Text = totalCredits.ToString();
 
-            lblw1.Text = totalWeight.ToString();
+            lblcredit1.Text = c1.ToString();
+
 
         }
     }

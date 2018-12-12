@@ -56,7 +56,7 @@
             this.lblGPAResult = new System.Windows.Forms.Label();
             this.lblTotalCredits = new System.Windows.Forms.Label();
             this.lblCredits = new System.Windows.Forms.Label();
-            this.lblw1 = new System.Windows.Forms.Label();
+            this.lblcredit1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblClass2
@@ -146,9 +146,9 @@
             this.comboBoxC1.Items.AddRange(new object[] {
             "0",
             ".5",
-            "1",
-            "2",
-            "3"});
+            "1.0",
+            "2.0",
+            "3.0"});
             this.comboBoxC1.Location = new System.Drawing.Point(220, 183);
             this.comboBoxC1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxC1.Name = "comboBoxC1";
@@ -478,20 +478,20 @@
             this.lblCredits.Size = new System.Drawing.Size(0, 25);
             this.lblCredits.TabIndex = 28;
             // 
-            // lblw1
+            // lblcredit1
             // 
-            this.lblw1.AutoSize = true;
-            this.lblw1.Location = new System.Drawing.Point(722, 532);
-            this.lblw1.Name = "lblw1";
-            this.lblw1.Size = new System.Drawing.Size(0, 25);
-            this.lblw1.TabIndex = 29;
+            this.lblcredit1.AutoSize = true;
+            this.lblcredit1.Location = new System.Drawing.Point(722, 532);
+            this.lblcredit1.Name = "lblcredit1";
+            this.lblcredit1.Size = new System.Drawing.Size(0, 25);
+            this.lblcredit1.TabIndex = 29;
             // 
             // GPACalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 956);
-            this.Controls.Add(this.lblw1);
+            this.Controls.Add(this.lblcredit1);
             this.Controls.Add(this.lblCredits);
             this.Controls.Add(this.lblTotalCredits);
             this.Controls.Add(this.lblGPAResult);
@@ -557,6 +557,6 @@
         private System.Windows.Forms.Label lblGPAResult;
         private System.Windows.Forms.Label lblTotalCredits;
         private System.Windows.Forms.Label lblCredits;
-        private System.Windows.Forms.Label lblw1;
+        private System.Windows.Forms.Label lblcredit1;
     }
 }
