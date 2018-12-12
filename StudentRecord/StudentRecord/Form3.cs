@@ -25,6 +25,15 @@ namespace StudentRecord
             comboBoxC6.SelectedIndex = 0;
             comboBoxC7.SelectedIndex = 0;
 
+            comboBoxG1.SelectedIndex = 0;
+            comboBoxG2.SelectedIndex = 0;
+            comboBoxG3.SelectedIndex = 0;
+            comboBoxG4.SelectedIndex = 0;
+            comboBoxG5.SelectedIndex = 0; 
+            comboBoxG6.SelectedIndex = 0;
+            comboBoxG7.SelectedIndex = 0;
+
+
         }
 
         // calculate grade weight
@@ -93,24 +102,25 @@ namespace StudentRecord
             double Gpa = 0.0;
              
             //convert credits to double value
-            c1 = double.Parse(comboBoxC1.SelectedIndex.ToString());
-            c2 = double.Parse(comboBoxC2.SelectedIndex.ToString());
-            c3 = double.Parse(comboBoxC3.SelectedIndex.ToString());
-            c4 = double.Parse(comboBoxC4.SelectedIndex.ToString());
-            c5 = double.Parse(comboBoxC5.SelectedIndex.ToString());
-            c6 = double.Parse(comboBoxC6.SelectedIndex.ToString());
-            c7 = double.Parse(comboBoxC7.SelectedIndex.ToString());
+            c1 = double.Parse(comboBoxC1.SelectedItem.ToString());
+            c2 = double.Parse(comboBoxC2.SelectedItem.ToString());
+            c3 = double.Parse(comboBoxC3.SelectedItem.ToString());
+            c4 = double.Parse(comboBoxC4.SelectedItem.ToString());
+            c5 = double.Parse(comboBoxC5.SelectedItem.ToString());
+            c6 = double.Parse(comboBoxC6.SelectedItem.ToString());
+            c7 = double.Parse(comboBoxC7.SelectedItem.ToString());
 
             //calculate total credits
             //double[] credits = { c1, c2, c3, c4, c5, c6, c7 };
-            var credits = new List<double> { c1, c2, c3, c4, c5, c6, c7};
-            /*credits.Add(c1);
+            //var credits = new List<double> { c1, c2, c3, c4, c5, c6, c7};
+            List<double> credits = new List<double>();
+            credits.Add(c1);
             credits.Add(c2);
             credits.Add(c3);
             credits.Add(c4);
             credits.Add(c5);
             credits.Add(c6);
-            credits.Add(c7);*/
+            credits.Add(c7);
 
             double totalCredits = credits.Sum();
 
@@ -128,28 +138,28 @@ namespace StudentRecord
             w6 = c6 / totalCredits;
             w7 = c7 / totalCredits;
 
-            var weights = new List<double> { w1, w2, w3, w4, w5, w6, w7 };
+            
 
-            /*List<double> weights = new List<double>();
+            List<double> weights = new List<double>();
             weights.Add(w1);
             weights.Add(w2);
             weights.Add(w3);
             weights.Add(w4);
             weights.Add(w5);
             weights.Add(w6);
-            weights.Add(w7);*/
+            weights.Add(w7);
 
 
             //convert grades to string
-            g1 = comboBoxG1.SelectedIndex.ToString();
-            g2 = comboBoxG2.SelectedIndex.ToString();
-            g3 = comboBoxG3.SelectedIndex.ToString();
-            g4 = comboBoxG4.SelectedIndex.ToString();
-            g5 = comboBoxG5.SelectedIndex.ToString();
-            g6 = comboBoxG6.SelectedIndex.ToString();
-            g7 = comboBoxG7.SelectedIndex.ToString();
+            g1 = comboBoxG1.SelectedItem.ToString();
+            g2 = comboBoxG2.SelectedItem.ToString();
+            g3 = comboBoxG3.SelectedItem.ToString();
+            g4 = comboBoxG4.SelectedItem.ToString();
+            g5 = comboBoxG5.SelectedItem.ToString();
+            g6 = comboBoxG6.SelectedItem.ToString();
+            g7 = comboBoxG7.SelectedItem.ToString();
 
-           // String[] grades = { g1, g2, g3, g4, g5, g6, g7 };
+           //String[] grades = { g1, g2, g3, g4, g5, g6, g7 };
             List<String> grades = new List<String>();
 
 
