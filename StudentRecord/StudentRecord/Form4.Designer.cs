@@ -57,6 +57,7 @@
             this.textBoxWeight = new System.Windows.Forms.TextBox();
             this.lblWeight = new System.Windows.Forms.Label();
             this.btnCalcGrade = new System.Windows.Forms.Button();
+            this.lblWeightError = new System.Windows.Forms.Label();
             this.tabControlAssignments.SuspendLayout();
             this.tabHomework.SuspendLayout();
             this.tabParticipation.SuspendLayout();
@@ -315,7 +316,7 @@
             // 
             // btnCalcGrade
             // 
-            this.btnCalcGrade.Location = new System.Drawing.Point(6, 249);
+            this.btnCalcGrade.Location = new System.Drawing.Point(6, 318);
             this.btnCalcGrade.Name = "btnCalcGrade";
             this.btnCalcGrade.Size = new System.Drawing.Size(234, 36);
             this.btnCalcGrade.TabIndex = 20;
@@ -323,11 +324,20 @@
             this.btnCalcGrade.UseVisualStyleBackColor = true;
             this.btnCalcGrade.Click += new System.EventHandler(this.btnCalcGrade_Click);
             // 
+            // lblWeightError
+            // 
+            this.lblWeightError.AutoSize = true;
+            this.lblWeightError.Location = new System.Drawing.Point(32, 257);
+            this.lblWeightError.Name = "lblWeightError";
+            this.lblWeightError.Size = new System.Drawing.Size(0, 13);
+            this.lblWeightError.TabIndex = 21;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 572);
+            this.Controls.Add(this.lblWeightError);
             this.Controls.Add(this.btnCalcGrade);
             this.Controls.Add(this.lblWeight);
             this.Controls.Add(this.textBoxWeight);
@@ -386,5 +396,6 @@
         private System.Windows.Forms.TextBox textBoxWeight;
         private System.Windows.Forms.Label lblWeight;
         private System.Windows.Forms.Button btnCalcGrade;
+        private System.Windows.Forms.Label lblWeightError;
     }
 }

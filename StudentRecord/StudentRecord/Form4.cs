@@ -14,7 +14,7 @@ namespace StudentRecord
 {
     public partial class Form4 : Form
     {
-        public static BindingList<Assignment> assignments = new BindingList<Assignment>();
+        //public static BindingList<Assignment> assignments = new BindingList<Assignment>();
         static BindingList<Assignment> homework = new BindingList<Assignment>();
         static BindingList<Assignment> participation = new BindingList<Assignment>();
         static BindingList<Assignment> midterm = new BindingList<Assignment>();
@@ -24,7 +24,7 @@ namespace StudentRecord
         public double pointsHW, pointsPart, pointsMidterm, pointsQuizzes, pointsFinal, pointsProjects;
         public double totalPointsHW, totalPointsPart, totalPointsMidterm, totalPointsQuizzes, totalPointsFinal, totalPointsProjects;
         public double gradeHW, gradePart, gradeMidterm, gradeQuizzes, gradeFinal, gradeProjects;
-
+        public List<double> allWeights = new List<double>();
 
         public Form4()
         {
@@ -60,6 +60,8 @@ namespace StudentRecord
             string category = comboBoxCategory.Items[comboBoxCategory.SelectedIndex].ToString();
             
             Assignment a;
+            double weight;
+            
             if (category.Equals("Homework"))
             {
                 a = new Assignment()
@@ -70,9 +72,12 @@ namespace StudentRecord
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
-
                 };
+                
                 homework.Add(a);
+                // add category weight to list of weights (used to check if it adds up to 100)
+                weight = double.Parse(textBoxWeight.Text);
+                allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabHomework;
             }
             else if (category.Equals("Participation"))
@@ -87,7 +92,10 @@ namespace StudentRecord
                     //percentage = calculatePercentage()
 
                 };
+
                 participation.Add(a);
+                weight = double.Parse(textBoxWeight.Text);
+                allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabParticipation;
             }
             else if (category.Equals("Midterm"))
@@ -103,6 +111,8 @@ namespace StudentRecord
 
                 };
                 midterm.Add(a);
+                weight = double.Parse(textBoxWeight.Text);
+                allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabMidterm;
             }
             else if (category.Equals("Quizzes"))
@@ -118,6 +128,8 @@ namespace StudentRecord
 
                 };
                 quizzes.Add(a);
+                weight = double.Parse(textBoxWeight.Text);
+                allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabQuizzes;
             }
             else if (category.Equals("Final"))
@@ -133,6 +145,8 @@ namespace StudentRecord
 
                 };
                 final.Add(a);
+                weight = double.Parse(textBoxWeight.Text);
+                allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabFinal;
             }
             else if (category.Equals("Projects"))
@@ -148,9 +162,16 @@ namespace StudentRecord
 
                 };
                 projects.Add(a);
+                weight = double.Parse(textBoxWeight.Text);
+                allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabProjects;
 
             }
+            if (allWeights.Sum() > 100)
+            {
+                lblWeightError.Text = "The category weights you entered do not add up to 100%. Please fix this.";
+            }
+
             //WriteRecord();
         }
 
@@ -186,6 +207,7 @@ namespace StudentRecord
             //WriteRecord();
         }
 
+       
         private void btnCalcGrade_Click(object sender, EventArgs e)
         {
 
