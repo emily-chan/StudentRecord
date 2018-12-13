@@ -21,6 +21,10 @@ namespace StudentRecord
         static BindingList<Assignment> quizzes = new BindingList<Assignment>();
         static BindingList<Assignment> final = new BindingList<Assignment>();
         static BindingList<Assignment> projects = new BindingList<Assignment>();
+        public double pointsHW, pointsPart, pointsMidterm, pointsQuizzes, pointsFinal, pointsProjects;
+        public double totalPointsHW, totalPointsPart, totalPointsMidterm, totalPointsQuizzes, totalPointsFinal, totalPointsProjects;
+        public double gradeHW, gradePart, gradeMidterm, gradeQuizzes, gradeFinal, gradeProjects;
+
 
         public Form4()
         {
@@ -62,6 +66,7 @@ namespace StudentRecord
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Homework",
+                    weight = textBoxWeight.Text,
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
@@ -76,6 +81,7 @@ namespace StudentRecord
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Participation",
+                    weight = textBoxWeight.Text,
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
@@ -90,9 +96,10 @@ namespace StudentRecord
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Midterm",
+                    weight = textBoxWeight.Text,
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
-                    //percentage = calculatePercentage()
+                    
 
                 };
                 midterm.Add(a);
@@ -104,6 +111,7 @@ namespace StudentRecord
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Quizzes",
+                    weight = textBoxWeight.Text,
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
@@ -118,6 +126,7 @@ namespace StudentRecord
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Final",
+                    weight = textBoxWeight.Text,
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
@@ -132,6 +141,7 @@ namespace StudentRecord
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Projects",
+                    weight = textBoxWeight.Text,
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
@@ -176,35 +186,40 @@ namespace StudentRecord
             //WriteRecord();
         }
 
+        private void btnCalcGrade_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //serialization part
 
-            /*
-        public static void WriteRecord()
+        /*
+    public static void WriteRecord()
+    {
+        //serialization-xml
+        XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Assignment>));
+        TextWriter writer = new StreamWriter("serialized.xml");
+        serializerW.Serialize(writer, assignments);
+        writer.Close();
+    }
+    public static void LoadRecord()
+    {
+        try
         {
-            //serialization-xml
-            XmlSerializer serializerW = new XmlSerializer(typeof(BindingList<Assignment>));
-            TextWriter writer = new StreamWriter("serialized.xml");
-            serializerW.Serialize(writer, assignments);
-            writer.Close();
+            //deserialization-xml
+            XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
+            TextReader reader = new StreamReader("serialized.xml");
+            assignments = (BindingList<Assignment>)serializerR.Deserialize(reader);
+            reader.Close();
         }
-        public static void LoadRecord()
+        catch (FileNotFoundException e)
         {
-            try
-            {
-                //deserialization-xml
-                XmlSerializer serializerR = new XmlSerializer(typeof(BindingList<Student>));
-                TextReader reader = new StreamReader("serialized.xml");
-                assignments = (BindingList<Assignment>)serializerR.Deserialize(reader);
-                reader.Close();
-            }
-            catch (FileNotFoundException e)
-            {
-                Console.WriteLine("Error");
-            }
+            Console.WriteLine("Error");
         }
-        */
+    }
+    */
 
-        
+
     }
 
 }

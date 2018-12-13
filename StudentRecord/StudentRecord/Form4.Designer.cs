@@ -43,19 +43,20 @@
             this.lblAssignments = new System.Windows.Forms.Label();
             this.tabControlAssignments = new System.Windows.Forms.TabControl();
             this.tabHomework = new System.Windows.Forms.TabPage();
-            this.tabParticipation = new System.Windows.Forms.TabPage();
-            this.tabMidterm = new System.Windows.Forms.TabPage();
-            this.tabQuizzes = new System.Windows.Forms.TabPage();
-            this.tabFinal = new System.Windows.Forms.TabPage();
-            this.tabProjects = new System.Windows.Forms.TabPage();
             this.listBoxHomework = new System.Windows.Forms.ListBox();
+            this.tabParticipation = new System.Windows.Forms.TabPage();
             this.listBoxParticipation = new System.Windows.Forms.ListBox();
+            this.tabMidterm = new System.Windows.Forms.TabPage();
             this.listBoxMidterm = new System.Windows.Forms.ListBox();
+            this.tabQuizzes = new System.Windows.Forms.TabPage();
             this.listBoxQuizzes = new System.Windows.Forms.ListBox();
+            this.tabFinal = new System.Windows.Forms.TabPage();
             this.listBoxFinal = new System.Windows.Forms.ListBox();
+            this.tabProjects = new System.Windows.Forms.TabPage();
             this.listBoxProjects = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxWeight = new System.Windows.Forms.TextBox();
             this.lblWeight = new System.Windows.Forms.Label();
+            this.btnCalcGrade = new System.Windows.Forms.Button();
             this.tabControlAssignments.SuspendLayout();
             this.tabHomework.SuspendLayout();
             this.tabParticipation.SuspendLayout();
@@ -197,6 +198,14 @@
             this.tabHomework.Text = "Homework";
             this.tabHomework.UseVisualStyleBackColor = true;
             // 
+            // listBoxHomework
+            // 
+            this.listBoxHomework.FormattingEnabled = true;
+            this.listBoxHomework.Location = new System.Drawing.Point(0, 0);
+            this.listBoxHomework.Name = "listBoxHomework";
+            this.listBoxHomework.Size = new System.Drawing.Size(318, 160);
+            this.listBoxHomework.TabIndex = 0;
+            // 
             // tabParticipation
             // 
             this.tabParticipation.Controls.Add(this.listBoxParticipation);
@@ -208,6 +217,14 @@
             this.tabParticipation.Text = "Participation";
             this.tabParticipation.UseVisualStyleBackColor = true;
             // 
+            // listBoxParticipation
+            // 
+            this.listBoxParticipation.FormattingEnabled = true;
+            this.listBoxParticipation.Location = new System.Drawing.Point(0, 0);
+            this.listBoxParticipation.Name = "listBoxParticipation";
+            this.listBoxParticipation.Size = new System.Drawing.Size(318, 160);
+            this.listBoxParticipation.TabIndex = 1;
+            // 
             // tabMidterm
             // 
             this.tabMidterm.Controls.Add(this.listBoxMidterm);
@@ -217,6 +234,14 @@
             this.tabMidterm.TabIndex = 2;
             this.tabMidterm.Text = "Midterm";
             this.tabMidterm.UseVisualStyleBackColor = true;
+            // 
+            // listBoxMidterm
+            // 
+            this.listBoxMidterm.FormattingEnabled = true;
+            this.listBoxMidterm.Location = new System.Drawing.Point(0, 0);
+            this.listBoxMidterm.Name = "listBoxMidterm";
+            this.listBoxMidterm.Size = new System.Drawing.Size(318, 160);
+            this.listBoxMidterm.TabIndex = 1;
             // 
             // tabQuizzes
             // 
@@ -228,6 +253,14 @@
             this.tabQuizzes.Text = "Quizzes";
             this.tabQuizzes.UseVisualStyleBackColor = true;
             // 
+            // listBoxQuizzes
+            // 
+            this.listBoxQuizzes.FormattingEnabled = true;
+            this.listBoxQuizzes.Location = new System.Drawing.Point(0, 0);
+            this.listBoxQuizzes.Name = "listBoxQuizzes";
+            this.listBoxQuizzes.Size = new System.Drawing.Size(318, 160);
+            this.listBoxQuizzes.TabIndex = 1;
+            // 
             // tabFinal
             // 
             this.tabFinal.Controls.Add(this.listBoxFinal);
@@ -237,6 +270,14 @@
             this.tabFinal.TabIndex = 4;
             this.tabFinal.Text = "Final";
             this.tabFinal.UseVisualStyleBackColor = true;
+            // 
+            // listBoxFinal
+            // 
+            this.listBoxFinal.FormattingEnabled = true;
+            this.listBoxFinal.Location = new System.Drawing.Point(0, 0);
+            this.listBoxFinal.Name = "listBoxFinal";
+            this.listBoxFinal.Size = new System.Drawing.Size(318, 160);
+            this.listBoxFinal.TabIndex = 1;
             // 
             // tabProjects
             // 
@@ -248,46 +289,6 @@
             this.tabProjects.Text = "Projects";
             this.tabProjects.UseVisualStyleBackColor = true;
             // 
-            // listBoxHomework
-            // 
-            this.listBoxHomework.FormattingEnabled = true;
-            this.listBoxHomework.Location = new System.Drawing.Point(0, 0);
-            this.listBoxHomework.Name = "listBoxHomework";
-            this.listBoxHomework.Size = new System.Drawing.Size(318, 160);
-            this.listBoxHomework.TabIndex = 0;
-            // 
-            // listBoxParticipation
-            // 
-            this.listBoxParticipation.FormattingEnabled = true;
-            this.listBoxParticipation.Location = new System.Drawing.Point(0, 0);
-            this.listBoxParticipation.Name = "listBoxParticipation";
-            this.listBoxParticipation.Size = new System.Drawing.Size(318, 160);
-            this.listBoxParticipation.TabIndex = 1;
-            // 
-            // listBoxMidterm
-            // 
-            this.listBoxMidterm.FormattingEnabled = true;
-            this.listBoxMidterm.Location = new System.Drawing.Point(0, 0);
-            this.listBoxMidterm.Name = "listBoxMidterm";
-            this.listBoxMidterm.Size = new System.Drawing.Size(318, 160);
-            this.listBoxMidterm.TabIndex = 1;
-            // 
-            // listBoxQuizzes
-            // 
-            this.listBoxQuizzes.FormattingEnabled = true;
-            this.listBoxQuizzes.Location = new System.Drawing.Point(0, 0);
-            this.listBoxQuizzes.Name = "listBoxQuizzes";
-            this.listBoxQuizzes.Size = new System.Drawing.Size(318, 160);
-            this.listBoxQuizzes.TabIndex = 1;
-            // 
-            // listBoxFinal
-            // 
-            this.listBoxFinal.FormattingEnabled = true;
-            this.listBoxFinal.Location = new System.Drawing.Point(0, 0);
-            this.listBoxFinal.Name = "listBoxFinal";
-            this.listBoxFinal.Size = new System.Drawing.Size(318, 160);
-            this.listBoxFinal.TabIndex = 1;
-            // 
             // listBoxProjects
             // 
             this.listBoxProjects.FormattingEnabled = true;
@@ -296,12 +297,12 @@
             this.listBoxProjects.Size = new System.Drawing.Size(322, 160);
             this.listBoxProjects.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxWeight
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
+            this.textBoxWeight.Location = new System.Drawing.Point(140, 86);
+            this.textBoxWeight.Name = "textBoxWeight";
+            this.textBoxWeight.Size = new System.Drawing.Size(100, 20);
+            this.textBoxWeight.TabIndex = 18;
             // 
             // lblWeight
             // 
@@ -312,13 +313,24 @@
             this.lblWeight.TabIndex = 19;
             this.lblWeight.Text = "Weight (%):";
             // 
+            // btnCalcGrade
+            // 
+            this.btnCalcGrade.Location = new System.Drawing.Point(6, 249);
+            this.btnCalcGrade.Name = "btnCalcGrade";
+            this.btnCalcGrade.Size = new System.Drawing.Size(234, 36);
+            this.btnCalcGrade.TabIndex = 20;
+            this.btnCalcGrade.Text = "Calculate Grade";
+            this.btnCalcGrade.UseVisualStyleBackColor = true;
+            this.btnCalcGrade.Click += new System.EventHandler(this.btnCalcGrade_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 369);
+            this.ClientSize = new System.Drawing.Size(607, 572);
+            this.Controls.Add(this.btnCalcGrade);
             this.Controls.Add(this.lblWeight);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxWeight);
             this.Controls.Add(this.tabControlAssignments);
             this.Controls.Add(this.lblAssignments);
             this.Controls.Add(this.lblCategory);
@@ -371,7 +383,8 @@
         private System.Windows.Forms.ListBox listBoxFinal;
         private System.Windows.Forms.TabPage tabProjects;
         private System.Windows.Forms.ListBox listBoxProjects;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxWeight;
         private System.Windows.Forms.Label lblWeight;
+        private System.Windows.Forms.Button btnCalcGrade;
     }
 }

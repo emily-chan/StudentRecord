@@ -27,7 +27,7 @@ namespace StudentRecord
         {
             get
             {
-                return category + " - " + weight + "%" + assignmentName + ": " + calculatePercentage(pointsReceived, totalPoints);
+                return assignmentName + ": " + calculatePercentage(pointsReceived, totalPoints) + "%";
             }
         }
 
@@ -35,8 +35,9 @@ namespace StudentRecord
         {
             double points = Convert.ToDouble(pointsReceived);
             double total= Convert.ToDouble(totalPoints);
-            percentage = points / total;
+            percentage = (points / total)*100;
             return percentage;
         }
+        
     }
 }

@@ -413,7 +413,7 @@
             "D",
             "D-",
             "F"});
-            this.comboBoxG7.Location = new System.Drawing.Point(209, 367);
+            this.comboBoxG7.Location = new System.Drawing.Point(209, 366);
             this.comboBoxG7.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxG7.Name = "comboBoxG7";
             this.comboBoxG7.Size = new System.Drawing.Size(62, 21);
@@ -424,7 +424,7 @@
             this.btnCalcGPA.Location = new System.Drawing.Point(110, 407);
             this.btnCalcGPA.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalcGPA.Name = "btnCalcGPA";
-            this.btnCalcGPA.Size = new System.Drawing.Size(142, 20);
+            this.btnCalcGPA.Size = new System.Drawing.Size(161, 20);
             this.btnCalcGPA.TabIndex = 15;
             this.btnCalcGPA.Text = "Calculate GPA";
             this.btnCalcGPA.UseVisualStyleBackColor = true;
@@ -480,7 +480,7 @@
             // 
             this.btnClear.Location = new System.Drawing.Point(110, 432);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(142, 23);
+            this.btnClear.Size = new System.Drawing.Size(161, 23);
             this.btnClear.TabIndex = 29;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
