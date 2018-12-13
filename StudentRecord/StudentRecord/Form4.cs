@@ -24,6 +24,9 @@ namespace StudentRecord
         public double pointsHW, pointsPart, pointsMidterm, pointsQuizzes, pointsFinal, pointsProjects;
         public double totalPointsHW, totalPointsPart, totalPointsMidterm, totalPointsQuizzes, totalPointsFinal, totalPointsProjects;
         public double gradeHW, gradePart, gradeMidterm, gradeQuizzes, gradeFinal, gradeProjects;
+        double weight;
+        double pointsReceived, totalPoints;
+        double HWPerc, partPerc, midtermPerc, finalPerc, quizzesPerc, projectPerc;
         public List<double> allWeights = new List<double>();
 
         public Form4()
@@ -60,7 +63,7 @@ namespace StudentRecord
             string category = comboBoxCategory.Items[comboBoxCategory.SelectedIndex].ToString();
             
             Assignment a;
-            double weight;
+            
             
             if (category.Equals("Homework"))
             {
@@ -71,14 +74,26 @@ namespace StudentRecord
                     weight = textBoxWeight.Text,
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
+                    
                     //percentage = calculatePercentage()
                 };
+
                 
                 homework.Add(a);
                 // add category weight to list of weights (used to check if it adds up to 100)
                 weight = double.Parse(textBoxWeight.Text);
                 allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabHomework;
+
+                pointsReceived = double.Parse(textBoxPtsR.Text);
+                pointsHW += pointsReceived;
+
+                totalPoints = double.Parse(textBoxPtsP.Text);
+                totalPointsHW += totalPoints;
+
+                
+                HWPerc = ((pointsHW / totalPointsHW) * 100) * weight;
+
             }
             else if (category.Equals("Participation"))
             {
@@ -97,6 +112,15 @@ namespace StudentRecord
                 weight = double.Parse(textBoxWeight.Text);
                 allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabParticipation;
+
+                pointsReceived = double.Parse(textBoxPtsR.Text);
+                pointsPart += pointsReceived;
+
+                totalPoints = double.Parse(textBoxPtsP.Text);
+                totalPointsPart += totalPoints;
+
+              
+                partPerc = ((pointsPart / totalPointsPart) * 100) * weight;
             }
             else if (category.Equals("Midterm"))
             {
@@ -114,6 +138,16 @@ namespace StudentRecord
                 weight = double.Parse(textBoxWeight.Text);
                 allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabMidterm;
+
+                pointsReceived = double.Parse(textBoxPtsR.Text);
+                pointsMidterm += pointsReceived;
+
+                totalPoints = double.Parse(textBoxPtsP.Text);
+                totalPointsMidterm += totalPoints;
+
+                
+                midtermPerc = ((pointsMidterm / totalPointsMidterm) * 100) * weight;
+
             }
             else if (category.Equals("Quizzes"))
             {
@@ -131,6 +165,15 @@ namespace StudentRecord
                 weight = double.Parse(textBoxWeight.Text);
                 allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabQuizzes;
+
+                pointsReceived = double.Parse(textBoxPtsR.Text);
+                pointsQuizzes += pointsReceived;
+
+                totalPoints = double.Parse(textBoxPtsP.Text);
+                totalPointsQuizzes += totalPoints;
+
+              
+                quizzesPerc = ((pointsQuizzes / totalPointsQuizzes) * 100) * weight;
             }
             else if (category.Equals("Final"))
             {
@@ -148,6 +191,14 @@ namespace StudentRecord
                 weight = double.Parse(textBoxWeight.Text);
                 allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabFinal;
+
+                pointsReceived = double.Parse(textBoxPtsR.Text);
+                pointsFinal += pointsReceived;
+
+                totalPoints = double.Parse(textBoxPtsP.Text);
+                totalPointsFinal += totalPoints;
+
+                finalPerc = ((pointsFinal / totalPointsFinal)*100) * weight;
             }
             else if (category.Equals("Projects"))
             {
@@ -165,6 +216,15 @@ namespace StudentRecord
                 weight = double.Parse(textBoxWeight.Text);
                 allWeights.Add(weight);
                 tabControlAssignments.SelectedTab = tabProjects;
+
+                pointsReceived = double.Parse(textBoxPtsR.Text);
+                pointsProjects += pointsReceived;
+
+                totalPoints = double.Parse(textBoxPtsP.Text);
+                totalPointsProjects += totalPoints;
+
+                
+                projectPerc = ((pointsProjects / totalPointsProjects) * 100) * weight;
 
             }
             if (allWeights.Sum() > 100)
@@ -186,7 +246,7 @@ namespace StudentRecord
             {
                 participation.RemoveAt(listBoxParticipation.SelectedIndex);
             }
-            else if (tabControlAssignments.SelectedTab == tabParticipation && listBoxParticipation.SelectedIndex > -1)
+            else if (tabControlAssignments.SelectedTab == tabMidterm && listBoxMidterm.SelectedIndex > -1)
             {
                 midterm.RemoveAt(listBoxMidterm.SelectedIndex);
             }
@@ -210,7 +270,8 @@ namespace StudentRecord
        
         private void btnCalcGrade_Click(object sender, EventArgs e)
         {
-
+            double allGrades = (HWPerc + partPerc + quizzesPerc + midtermPerc + finalPerc + projectPerc)/ allWeights.Sum();
+            lblcalcGrade.Text = allGrades.ToString(); 
         }
 
         //serialization part
