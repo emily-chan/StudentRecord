@@ -15,7 +15,13 @@ namespace StudentRecord
     public partial class Form4 : Form
     {
         public static BindingList<Assignment> assignments = new BindingList<Assignment>();
-        
+        static BindingList<Assignment> homework = new BindingList<Assignment>();
+        static BindingList<Assignment> participation = new BindingList<Assignment>();
+        static BindingList<Assignment> midterm = new BindingList<Assignment>();
+        static BindingList<Assignment> quizzes = new BindingList<Assignment>();
+        static BindingList<Assignment> final = new BindingList<Assignment>();
+        static BindingList<Assignment> projects = new BindingList<Assignment>();
+
         public Form4()
         {
            
@@ -25,8 +31,21 @@ namespace StudentRecord
         }
         private void BindListBox()
         {
-            listBoxAssignments.DataSource = assignments;
-            listBoxAssignments.DisplayMember = "displayAssignments";
+            listBoxHomework.DataSource = homework;
+            listBoxHomework.DisplayMember = "displayAssignment";
+            listBoxParticipation.DataSource = participation;
+            listBoxParticipation.DisplayMember = "displayAssignment";
+            listBoxMidterm.DataSource = midterm;
+            listBoxMidterm.DisplayMember = "displayAssignment";
+            listBoxQuizzes.DataSource = quizzes;
+            listBoxQuizzes.DisplayMember = "displayAssignment";
+            listBoxFinal.DataSource = final;
+            listBoxFinal.DisplayMember = "displayAssignment";
+            listBoxProjects.DataSource = projects;
+            listBoxProjects.DisplayMember = "displayAssignment";
+
+            //listBoxAssignments.DataSource = assignments;
+            //listBoxAssignments.DisplayMember = "displayAssignment";
             //dataGridAssignments.DataSource = assignments;
             //dataGridAssignments.ColumnAsg = "displayAssignmentName";
         }
@@ -35,10 +54,11 @@ namespace StudentRecord
         private void btnAA_Click(object sender, EventArgs e)
         {
             string category = comboBoxCategory.Items[comboBoxCategory.SelectedIndex].ToString();
-
+            
+            Assignment a;
             if (category.Equals("Homework"))
             {
-                assignments.Add(new Assignment()
+                a = new Assignment()
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Homework",
@@ -46,73 +66,79 @@ namespace StudentRecord
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
 
-                });
-
+                };
+                homework.Add(a);
+                tabControlAssignments.SelectedTab = tabHomework;
             }
             else if (category.Equals("Participation"))
             {
-
-                assignments.Add(new Assignment()
+                a = new Assignment()
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Participation",
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
-                });
 
+                };
+                participation.Add(a);
+                tabControlAssignments.SelectedTab = tabParticipation;
             }
             else if (category.Equals("Midterm"))
             {
-
-                assignments.Add(new Assignment()
+                a = new Assignment()
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Midterm",
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
-                });
 
+                };
+                midterm.Add(a);
+                tabControlAssignments.SelectedTab = tabMidterm;
             }
             else if (category.Equals("Quizzes"))
             {
-
-                assignments.Add(new Assignment()
+                a = new Assignment()
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Quizzes",
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
-                });
 
+                };
+                quizzes.Add(a);
+                tabControlAssignments.SelectedTab = tabQuizzes;
             }
-
             else if (category.Equals("Final"))
             {
-
-                assignments.Add(new Assignment()
+                a = new Assignment()
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Final",
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
-                });
 
+                };
+                final.Add(a);
+                tabControlAssignments.SelectedTab = tabFinal;
             }
             else if (category.Equals("Projects"))
             {
-
-                assignments.Add(new Assignment()
+                a = new Assignment()
                 {
                     assignmentName = textBoxAsg.Text,
                     category = "Projects",
                     pointsReceived = textBoxPtsR.Text,
                     totalPoints = textBoxPtsP.Text,
                     //percentage = calculatePercentage()
-                });
+
+                };
+                projects.Add(a);
+                tabControlAssignments.SelectedTab = tabProjects;
 
             }
             //WriteRecord();
@@ -121,10 +147,31 @@ namespace StudentRecord
 
         private void btnDA_Click(object sender, EventArgs e)
         {
-            if (listBoxAssignments.SelectedIndex > -1)
+            if (tabControlAssignments.SelectedTab == tabHomework && listBoxHomework.SelectedIndex > -1)
             {
-                assignments.RemoveAt(listBoxAssignments.SelectedIndex);
+                homework.RemoveAt(listBoxHomework.SelectedIndex);
             }
+            else if (tabControlAssignments.SelectedTab == tabParticipation && listBoxParticipation.SelectedIndex > -1)
+            {
+                participation.RemoveAt(listBoxParticipation.SelectedIndex);
+            }
+            else if (tabControlAssignments.SelectedTab == tabParticipation && listBoxParticipation.SelectedIndex > -1)
+            {
+                midterm.RemoveAt(listBoxMidterm.SelectedIndex);
+            }
+            else if (tabControlAssignments.SelectedTab == tabQuizzes && listBoxQuizzes.SelectedIndex > -1)
+            {
+                quizzes.RemoveAt(listBoxQuizzes.SelectedIndex);
+            }
+            else if (tabControlAssignments.SelectedTab == tabFinal && listBoxFinal.SelectedIndex > -1)
+            {
+                final.RemoveAt(listBoxFinal.SelectedIndex);
+            }
+            else if (tabControlAssignments.SelectedTab == tabProjects && listBoxProjects.SelectedIndex > -1)
+            {
+                projects.RemoveAt(listBoxProjects.SelectedIndex);
+            }
+           
 
             //WriteRecord();
         }

@@ -149,8 +149,7 @@ namespace StudentRecord
             }
             else if (tabControlClass.SelectedTab == tabSpring && listboxSpring.SelectedIndex > -1)
             {
-                if (listboxFall.SelectedIndex > -1)
-                    springClasses.RemoveAt(listboxSpring.SelectedIndex);
+                springClasses.RemoveAt(listboxSpring.SelectedIndex);
             }
             lblClassInfo.Text = "";
             WriteRecord();

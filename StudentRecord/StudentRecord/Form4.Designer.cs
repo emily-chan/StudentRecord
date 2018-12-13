@@ -41,7 +41,28 @@
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.lblAssignments = new System.Windows.Forms.Label();
-            this.listBoxAssignments = new System.Windows.Forms.ListBox();
+            this.tabControlAssignments = new System.Windows.Forms.TabControl();
+            this.tabHomework = new System.Windows.Forms.TabPage();
+            this.tabParticipation = new System.Windows.Forms.TabPage();
+            this.tabMidterm = new System.Windows.Forms.TabPage();
+            this.tabQuizzes = new System.Windows.Forms.TabPage();
+            this.tabFinal = new System.Windows.Forms.TabPage();
+            this.tabProjects = new System.Windows.Forms.TabPage();
+            this.listBoxHomework = new System.Windows.Forms.ListBox();
+            this.listBoxParticipation = new System.Windows.Forms.ListBox();
+            this.listBoxMidterm = new System.Windows.Forms.ListBox();
+            this.listBoxQuizzes = new System.Windows.Forms.ListBox();
+            this.listBoxFinal = new System.Windows.Forms.ListBox();
+            this.listBoxProjects = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblWeight = new System.Windows.Forms.Label();
+            this.tabControlAssignments.SuspendLayout();
+            this.tabHomework.SuspendLayout();
+            this.tabParticipation.SuspendLayout();
+            this.tabMidterm.SuspendLayout();
+            this.tabQuizzes.SuspendLayout();
+            this.tabFinal.SuspendLayout();
+            this.tabProjects.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -52,7 +73,7 @@
             // asgName
             // 
             this.asgName.AutoSize = true;
-            this.asgName.Location = new System.Drawing.Point(8, 71);
+            this.asgName.Location = new System.Drawing.Point(12, 70);
             this.asgName.Name = "asgName";
             this.asgName.Size = new System.Drawing.Size(95, 13);
             this.asgName.TabIndex = 2;
@@ -61,11 +82,11 @@
             // ptsR
             // 
             this.ptsR.AutoSize = true;
-            this.ptsR.Location = new System.Drawing.Point(5, 120);
+            this.ptsR.Location = new System.Drawing.Point(12, 120);
             this.ptsR.Name = "ptsR";
-            this.ptsR.Size = new System.Drawing.Size(85, 13);
+            this.ptsR.Size = new System.Drawing.Size(88, 13);
             this.ptsR.TabIndex = 3;
-            this.ptsR.Text = "Points Received";
+            this.ptsR.Text = "Points Received:";
             // 
             // totalPts
             // 
@@ -78,7 +99,7 @@
             // 
             // textBoxAsg
             // 
-            this.textBoxAsg.Location = new System.Drawing.Point(6, 86);
+            this.textBoxAsg.Location = new System.Drawing.Point(12, 86);
             this.textBoxAsg.Name = "textBoxAsg";
             this.textBoxAsg.Size = new System.Drawing.Size(110, 20);
             this.textBoxAsg.TabIndex = 5;
@@ -92,16 +113,16 @@
             // 
             // textBoxPtsR
             // 
-            this.textBoxPtsR.Location = new System.Drawing.Point(6, 139);
+            this.textBoxPtsR.Location = new System.Drawing.Point(11, 139);
             this.textBoxPtsR.Name = "textBoxPtsR";
             this.textBoxPtsR.Size = new System.Drawing.Size(110, 20);
             this.textBoxPtsR.TabIndex = 7;
             // 
             // btnAA
             // 
-            this.btnAA.Location = new System.Drawing.Point(11, 214);
+            this.btnAA.Location = new System.Drawing.Point(11, 198);
             this.btnAA.Name = "btnAA";
-            this.btnAA.Size = new System.Drawing.Size(108, 23);
+            this.btnAA.Size = new System.Drawing.Size(111, 23);
             this.btnAA.TabIndex = 8;
             this.btnAA.Text = "Add Assignment";
             this.btnAA.UseVisualStyleBackColor = true;
@@ -109,9 +130,9 @@
             // 
             // btnDA
             // 
-            this.btnDA.Location = new System.Drawing.Point(137, 214);
+            this.btnDA.Location = new System.Drawing.Point(135, 198);
             this.btnDA.Name = "btnDA";
-            this.btnDA.Size = new System.Drawing.Size(108, 23);
+            this.btnDA.Size = new System.Drawing.Size(110, 23);
             this.btnDA.TabIndex = 9;
             this.btnDA.Text = "Delete Assignment";
             this.btnDA.UseVisualStyleBackColor = true;
@@ -128,7 +149,7 @@
             "Quizzes",
             "Final",
             "Projects"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(5, 25);
+            this.comboBoxCategory.Location = new System.Drawing.Point(12, 30);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(109, 21);
             this.comboBoxCategory.TabIndex = 12;
@@ -136,7 +157,7 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(6, 9);
+            this.lblCategory.Location = new System.Drawing.Point(13, 14);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(49, 13);
             this.lblCategory.TabIndex = 13;
@@ -145,26 +166,160 @@
             // lblAssignments
             // 
             this.lblAssignments.AutoSize = true;
-            this.lblAssignments.Location = new System.Drawing.Point(297, 25);
+            this.lblAssignments.Location = new System.Drawing.Point(266, 30);
             this.lblAssignments.Name = "lblAssignments";
             this.lblAssignments.Size = new System.Drawing.Size(69, 13);
             this.lblAssignments.TabIndex = 15;
             this.lblAssignments.Text = "Assignments:";
             // 
-            // listBoxAssignments
+            // tabControlAssignments
             // 
-            this.listBoxAssignments.FormattingEnabled = true;
-            this.listBoxAssignments.Location = new System.Drawing.Point(300, 41);
-            this.listBoxAssignments.Name = "listBoxAssignments";
-            this.listBoxAssignments.Size = new System.Drawing.Size(221, 147);
-            this.listBoxAssignments.TabIndex = 16;
+            this.tabControlAssignments.Controls.Add(this.tabHomework);
+            this.tabControlAssignments.Controls.Add(this.tabParticipation);
+            this.tabControlAssignments.Controls.Add(this.tabMidterm);
+            this.tabControlAssignments.Controls.Add(this.tabQuizzes);
+            this.tabControlAssignments.Controls.Add(this.tabFinal);
+            this.tabControlAssignments.Controls.Add(this.tabProjects);
+            this.tabControlAssignments.Location = new System.Drawing.Point(269, 58);
+            this.tabControlAssignments.Name = "tabControlAssignments";
+            this.tabControlAssignments.SelectedIndex = 0;
+            this.tabControlAssignments.Size = new System.Drawing.Size(326, 179);
+            this.tabControlAssignments.TabIndex = 17;
+            // 
+            // tabHomework
+            // 
+            this.tabHomework.Controls.Add(this.listBoxHomework);
+            this.tabHomework.Location = new System.Drawing.Point(4, 22);
+            this.tabHomework.Name = "tabHomework";
+            this.tabHomework.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHomework.Size = new System.Drawing.Size(318, 153);
+            this.tabHomework.TabIndex = 0;
+            this.tabHomework.Text = "Homework";
+            this.tabHomework.UseVisualStyleBackColor = true;
+            // 
+            // tabParticipation
+            // 
+            this.tabParticipation.Controls.Add(this.listBoxParticipation);
+            this.tabParticipation.Location = new System.Drawing.Point(4, 22);
+            this.tabParticipation.Name = "tabParticipation";
+            this.tabParticipation.Padding = new System.Windows.Forms.Padding(3);
+            this.tabParticipation.Size = new System.Drawing.Size(318, 153);
+            this.tabParticipation.TabIndex = 1;
+            this.tabParticipation.Text = "Participation";
+            this.tabParticipation.UseVisualStyleBackColor = true;
+            // 
+            // tabMidterm
+            // 
+            this.tabMidterm.Controls.Add(this.listBoxMidterm);
+            this.tabMidterm.Location = new System.Drawing.Point(4, 22);
+            this.tabMidterm.Name = "tabMidterm";
+            this.tabMidterm.Size = new System.Drawing.Size(318, 153);
+            this.tabMidterm.TabIndex = 2;
+            this.tabMidterm.Text = "Midterm";
+            this.tabMidterm.UseVisualStyleBackColor = true;
+            // 
+            // tabQuizzes
+            // 
+            this.tabQuizzes.Controls.Add(this.listBoxQuizzes);
+            this.tabQuizzes.Location = new System.Drawing.Point(4, 22);
+            this.tabQuizzes.Name = "tabQuizzes";
+            this.tabQuizzes.Size = new System.Drawing.Size(318, 153);
+            this.tabQuizzes.TabIndex = 3;
+            this.tabQuizzes.Text = "Quizzes";
+            this.tabQuizzes.UseVisualStyleBackColor = true;
+            // 
+            // tabFinal
+            // 
+            this.tabFinal.Controls.Add(this.listBoxFinal);
+            this.tabFinal.Location = new System.Drawing.Point(4, 22);
+            this.tabFinal.Name = "tabFinal";
+            this.tabFinal.Size = new System.Drawing.Size(318, 153);
+            this.tabFinal.TabIndex = 4;
+            this.tabFinal.Text = "Final";
+            this.tabFinal.UseVisualStyleBackColor = true;
+            // 
+            // tabProjects
+            // 
+            this.tabProjects.Controls.Add(this.listBoxProjects);
+            this.tabProjects.Location = new System.Drawing.Point(4, 22);
+            this.tabProjects.Name = "tabProjects";
+            this.tabProjects.Size = new System.Drawing.Size(318, 153);
+            this.tabProjects.TabIndex = 5;
+            this.tabProjects.Text = "Projects";
+            this.tabProjects.UseVisualStyleBackColor = true;
+            // 
+            // listBoxHomework
+            // 
+            this.listBoxHomework.FormattingEnabled = true;
+            this.listBoxHomework.Location = new System.Drawing.Point(0, 0);
+            this.listBoxHomework.Name = "listBoxHomework";
+            this.listBoxHomework.Size = new System.Drawing.Size(318, 160);
+            this.listBoxHomework.TabIndex = 0;
+            // 
+            // listBoxParticipation
+            // 
+            this.listBoxParticipation.FormattingEnabled = true;
+            this.listBoxParticipation.Location = new System.Drawing.Point(0, 0);
+            this.listBoxParticipation.Name = "listBoxParticipation";
+            this.listBoxParticipation.Size = new System.Drawing.Size(318, 160);
+            this.listBoxParticipation.TabIndex = 1;
+            // 
+            // listBoxMidterm
+            // 
+            this.listBoxMidterm.FormattingEnabled = true;
+            this.listBoxMidterm.Location = new System.Drawing.Point(0, 0);
+            this.listBoxMidterm.Name = "listBoxMidterm";
+            this.listBoxMidterm.Size = new System.Drawing.Size(318, 160);
+            this.listBoxMidterm.TabIndex = 1;
+            // 
+            // listBoxQuizzes
+            // 
+            this.listBoxQuizzes.FormattingEnabled = true;
+            this.listBoxQuizzes.Location = new System.Drawing.Point(0, 0);
+            this.listBoxQuizzes.Name = "listBoxQuizzes";
+            this.listBoxQuizzes.Size = new System.Drawing.Size(318, 160);
+            this.listBoxQuizzes.TabIndex = 1;
+            // 
+            // listBoxFinal
+            // 
+            this.listBoxFinal.FormattingEnabled = true;
+            this.listBoxFinal.Location = new System.Drawing.Point(0, 0);
+            this.listBoxFinal.Name = "listBoxFinal";
+            this.listBoxFinal.Size = new System.Drawing.Size(318, 160);
+            this.listBoxFinal.TabIndex = 1;
+            // 
+            // listBoxProjects
+            // 
+            this.listBoxProjects.FormattingEnabled = true;
+            this.listBoxProjects.Location = new System.Drawing.Point(0, 0);
+            this.listBoxProjects.Name = "listBoxProjects";
+            this.listBoxProjects.Size = new System.Drawing.Size(322, 160);
+            this.listBoxProjects.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(140, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 18;
+            // 
+            // lblWeight
+            // 
+            this.lblWeight.AutoSize = true;
+            this.lblWeight.Location = new System.Drawing.Point(141, 70);
+            this.lblWeight.Name = "lblWeight";
+            this.lblWeight.Size = new System.Drawing.Size(61, 13);
+            this.lblWeight.TabIndex = 19;
+            this.lblWeight.Text = "Weight (%):";
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 352);
-            this.Controls.Add(this.listBoxAssignments);
+            this.ClientSize = new System.Drawing.Size(607, 369);
+            this.Controls.Add(this.lblWeight);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tabControlAssignments);
             this.Controls.Add(this.lblAssignments);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.comboBoxCategory);
@@ -178,6 +333,13 @@
             this.Controls.Add(this.asgName);
             this.Name = "Form4";
             this.Text = "Add Assignments";
+            this.tabControlAssignments.ResumeLayout(false);
+            this.tabHomework.ResumeLayout(false);
+            this.tabParticipation.ResumeLayout(false);
+            this.tabMidterm.ResumeLayout(false);
+            this.tabQuizzes.ResumeLayout(false);
+            this.tabFinal.ResumeLayout(false);
+            this.tabProjects.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,6 +358,20 @@
         private System.Windows.Forms.ComboBox comboBoxCategory;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblAssignments;
-        private System.Windows.Forms.ListBox listBoxAssignments;
+        private System.Windows.Forms.TabControl tabControlAssignments;
+        private System.Windows.Forms.TabPage tabHomework;
+        private System.Windows.Forms.ListBox listBoxHomework;
+        private System.Windows.Forms.TabPage tabParticipation;
+        private System.Windows.Forms.ListBox listBoxParticipation;
+        private System.Windows.Forms.TabPage tabMidterm;
+        private System.Windows.Forms.ListBox listBoxMidterm;
+        private System.Windows.Forms.TabPage tabQuizzes;
+        private System.Windows.Forms.ListBox listBoxQuizzes;
+        private System.Windows.Forms.TabPage tabFinal;
+        private System.Windows.Forms.ListBox listBoxFinal;
+        private System.Windows.Forms.TabPage tabProjects;
+        private System.Windows.Forms.ListBox listBoxProjects;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblWeight;
     }
 }
