@@ -46,16 +46,8 @@
             this.lblClassNumber = new System.Windows.Forms.Label();
             this.textBoxNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDeleteCategory = new System.Windows.Forms.Button();
-            this.lblCategories = new System.Windows.Forms.Label();
-            this.lblWeight = new System.Windows.Forms.Label();
-            this.textBoxWeight = new System.Windows.Forms.TextBox();
-            this.btnAddCategory = new System.Windows.Forms.Button();
-            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
-            this.lblCategory = new System.Windows.Forms.Label();
             this.btnGpaCalculator = new System.Windows.Forms.Button();
             this.lblClassInfo = new System.Windows.Forms.Label();
-            this.listBoxCategories = new System.Windows.Forms.ListBox();
             this.btnFinalGradeCalc = new System.Windows.Forms.Button();
             this.tabControlClass.SuspendLayout();
             this.tabFall.SuspendLayout();
@@ -101,7 +93,7 @@
             // 
             // btnAddClass
             // 
-            this.btnAddClass.Location = new System.Drawing.Point(29, 436);
+            this.btnAddClass.Location = new System.Drawing.Point(24, 216);
             this.btnAddClass.Name = "btnAddClass";
             this.btnAddClass.Size = new System.Drawing.Size(75, 23);
             this.btnAddClass.TabIndex = 9;
@@ -111,7 +103,7 @@
             // 
             // btnDeleteClass
             // 
-            this.btnDeleteClass.Location = new System.Drawing.Point(110, 436);
+            this.btnDeleteClass.Location = new System.Drawing.Point(105, 216);
             this.btnDeleteClass.Name = "btnDeleteClass";
             this.btnDeleteClass.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteClass.TabIndex = 10;
@@ -171,7 +163,7 @@
             // 
             // btnEditClass
             // 
-            this.btnEditClass.Location = new System.Drawing.Point(29, 474);
+            this.btnEditClass.Location = new System.Drawing.Point(24, 254);
             this.btnEditClass.Name = "btnEditClass";
             this.btnEditClass.Size = new System.Drawing.Size(75, 23);
             this.btnEditClass.TabIndex = 11;
@@ -180,7 +172,7 @@
             // 
             // btnFinish
             // 
-            this.btnFinish.Location = new System.Drawing.Point(110, 474);
+            this.btnFinish.Location = new System.Drawing.Point(105, 254);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(75, 23);
             this.btnFinish.TabIndex = 12;
@@ -222,86 +214,16 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(235, 441);
+            this.label1.Location = new System.Drawing.Point(230, 221);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 45);
             this.label1.TabIndex = 16;
             this.label1.Text = "Click Finish when you\'re done adding classes to open dashboard and add assignment" +
     "s";
             // 
-            // btnDeleteCategory
-            // 
-            this.btnDeleteCategory.Location = new System.Drawing.Point(29, 370);
-            this.btnDeleteCategory.Name = "btnDeleteCategory";
-            this.btnDeleteCategory.Size = new System.Drawing.Size(110, 23);
-            this.btnDeleteCategory.TabIndex = 8;
-            this.btnDeleteCategory.Text = "Delete Category";
-            this.btnDeleteCategory.UseVisualStyleBackColor = true;
-            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
-            // 
-            // lblCategories
-            // 
-            this.lblCategories.AutoSize = true;
-            this.lblCategories.Location = new System.Drawing.Point(219, 224);
-            this.lblCategories.Name = "lblCategories";
-            this.lblCategories.Size = new System.Drawing.Size(60, 13);
-            this.lblCategories.TabIndex = 28;
-            this.lblCategories.Text = "Categories:";
-            // 
-            // lblWeight
-            // 
-            this.lblWeight.AutoSize = true;
-            this.lblWeight.Location = new System.Drawing.Point(27, 288);
-            this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(58, 13);
-            this.lblWeight.TabIndex = 26;
-            this.lblWeight.Text = "Weight (%)";
-            // 
-            // textBoxWeight
-            // 
-            this.textBoxWeight.Location = new System.Drawing.Point(30, 304);
-            this.textBoxWeight.Name = "textBoxWeight";
-            this.textBoxWeight.Size = new System.Drawing.Size(109, 20);
-            this.textBoxWeight.TabIndex = 6;
-            // 
-            // btnAddCategory
-            // 
-            this.btnAddCategory.Location = new System.Drawing.Point(30, 341);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(109, 23);
-            this.btnAddCategory.TabIndex = 7;
-            this.btnAddCategory.Text = "Add Category";
-            this.btnAddCategory.UseVisualStyleBackColor = true;
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
-            // 
-            // comboBoxCategory
-            // 
-            this.comboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Items.AddRange(new object[] {
-            "Homework",
-            "Participation",
-            "Midterm",
-            "Quizzes",
-            "Final",
-            "Projects"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(30, 244);
-            this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(109, 21);
-            this.comboBoxCategory.TabIndex = 5;
-            // 
-            // lblCategory
-            // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(30, 222);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(52, 13);
-            this.lblCategory.TabIndex = 22;
-            this.lblCategory.Text = "Category:";
-            // 
             // btnGpaCalculator
             // 
-            this.btnGpaCalculator.Location = new System.Drawing.Point(33, 540);
+            this.btnGpaCalculator.Location = new System.Drawing.Point(28, 320);
             this.btnGpaCalculator.Margin = new System.Windows.Forms.Padding(2);
             this.btnGpaCalculator.Name = "btnGpaCalculator";
             this.btnGpaCalculator.Size = new System.Drawing.Size(286, 32);
@@ -318,17 +240,9 @@
             this.lblClassInfo.Size = new System.Drawing.Size(0, 13);
             this.lblClassInfo.TabIndex = 34;
             // 
-            // listBoxCategories
-            // 
-            this.listBoxCategories.FormattingEnabled = true;
-            this.listBoxCategories.Location = new System.Drawing.Point(219, 240);
-            this.listBoxCategories.Name = "listBoxCategories";
-            this.listBoxCategories.Size = new System.Drawing.Size(191, 121);
-            this.listBoxCategories.TabIndex = 35;
-            // 
             // btnFinalGradeCalc
             // 
-            this.btnFinalGradeCalc.Location = new System.Drawing.Point(33, 603);
+            this.btnFinalGradeCalc.Location = new System.Drawing.Point(28, 383);
             this.btnFinalGradeCalc.Name = "btnFinalGradeCalc";
             this.btnFinalGradeCalc.Size = new System.Drawing.Size(286, 35);
             this.btnFinalGradeCalc.TabIndex = 14;
@@ -342,16 +256,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 674);
             this.Controls.Add(this.btnFinalGradeCalc);
-            this.Controls.Add(this.listBoxCategories);
             this.Controls.Add(this.lblClassInfo);
             this.Controls.Add(this.btnGpaCalculator);
-            this.Controls.Add(this.btnDeleteCategory);
-            this.Controls.Add(this.lblCategories);
-            this.Controls.Add(this.lblWeight);
-            this.Controls.Add(this.textBoxWeight);
-            this.Controls.Add(this.btnAddCategory);
-            this.Controls.Add(this.comboBoxCategory);
-            this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNumber);
             this.Controls.Add(this.lblClassNumber);
@@ -396,16 +302,8 @@
         private System.Windows.Forms.Label lblClassNumber;
         private System.Windows.Forms.TextBox textBoxNumber;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDeleteCategory;
-        private System.Windows.Forms.Label lblCategories;
-        private System.Windows.Forms.Label lblWeight;
-        private System.Windows.Forms.TextBox textBoxWeight;
-        private System.Windows.Forms.Button btnAddCategory;
-        private System.Windows.Forms.ComboBox comboBoxCategory;
-        private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Button btnGpaCalculator;
         private System.Windows.Forms.Label lblClassInfo;
-        private System.Windows.Forms.ListBox listBoxCategories;
         private System.Windows.Forms.Button btnFinalGradeCalc;
     }
 }

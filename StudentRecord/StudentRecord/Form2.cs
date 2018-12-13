@@ -46,9 +46,7 @@ namespace StudentRecord
 
             listboxSpring.DataSource = springClasses;
             listboxSpring.DisplayMember = "displayClass";
-
-            listBoxCategories.DataSource = categories;
-            listBoxCategories.DisplayMember = "displayCategory";
+            
         }
         public void PopulateDictionary()
         {
@@ -227,76 +225,7 @@ namespace StudentRecord
             WriteRecord();
         }
 
-        private void btnAddCategory_Click(object sender, EventArgs e)
-        {
-            Assignment c;
-            string category = comboBoxCategory.Items[comboBoxCategory.SelectedIndex].ToString();
-            if (category.Equals("Homework"))
-            {
-                c = new Assignment
-                {
-                    category = "Homework",
-                    weight = textBoxWeight.Text,
-                };
-                categories.Add(c);
-
-            }
-            else if (category.Equals("Participation"))
-            {
-                c = new Assignment
-                {
-                    category = "Participation",
-                    weight = textBoxWeight.Text,
-                };
-                categories.Add(c);
-            }
-            else if (category.Equals("Midterm"))
-            {
-                c = new Assignment
-                {
-                    category = "Midterm",
-                    weight = textBoxWeight.Text,
-                };
-                categories.Add(c);
-            }
-            else if (category.Equals("Quizzes"))
-            {
-                c = new Assignment
-                {
-                    category = "Quizzes",
-                    weight = textBoxWeight.Text,
-                };
-                categories.Add(c);
-            }
-            else if (category.Equals("Final"))
-            {
-                c = new Assignment
-                {
-                    category = "Final",
-                    weight = textBoxWeight.Text,
-                };
-                categories.Add(c);
-            }
-            else if (category.Equals("Projects"))
-            {
-                c = new Assignment
-                {
-                    category = "Projects",
-                    weight = textBoxWeight.Text,
-                };
-                categories.Add(c);
-            }
-            WriteRecord();
-        }
-
-        private void btnDeleteCategory_Click(object sender, EventArgs e)
-        {
-            if (listBoxCategories.SelectedIndex > -1)
-            {
-                categories.RemoveAt(listBoxCategories.SelectedIndex);
-            }
-        }
-
+        
         
         //serialization part
         public static void WriteRecord()
