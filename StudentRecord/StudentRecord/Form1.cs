@@ -18,7 +18,8 @@ namespace StudentRecord
     public partial class Form1 : Form
     {
         public static BindingList<Student> students = new BindingList<Student>();
-        
+        public Dictionary<Student, Dictionary<Term, BindingList<Class>>> studentInformation = new Dictionary<Student,Dictionary<Term, BindingList<Class>>>();
+
         public Form1()
         {
 
@@ -39,6 +40,7 @@ namespace StudentRecord
             gradeLevel.Items.AddRange(new object[] { "Freshman", "Sophomore", "Junior", "Senior" });
         }
         */
+        
 
         public void StartForm()
         {

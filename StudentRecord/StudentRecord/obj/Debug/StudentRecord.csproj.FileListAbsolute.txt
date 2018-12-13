@@ -15,7 +15,6 @@ C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\bin\Debug\
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csprojAssemblyReference.cache
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form1.resources
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form2.resources
-C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Form3.resources
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.Properties.Resources.resources
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csproj.GenerateResource.cache
 C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.csproj.CoreCompileInputs.cache
@@ -45,3 +44,8 @@ C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\D
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentDatabase_log.ldf
 C:\Users\emchan\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.FinalGradeCalc.resources
 \\Mac\Home\Documents\GitHub\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.FinalGradeCalc.resources
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentDatabase.mdf
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\bin\Debug\StudentDatabase_log.ldf
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.GPACalculator.resources
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.FinalGradeCalc.resources
+C:\Users\luzfonta\Documents\StudentRecord\StudentRecord\StudentRecord\obj\Debug\StudentRecord.SplashScreen.resources

@@ -35,6 +35,7 @@ namespace StudentRecord
             // Form1.students[studentIdx];// this is what you use to reference back to student fromm form one so everything updates.
 
             BindListBox();
+            
 
         }
 
@@ -49,7 +50,77 @@ namespace StudentRecord
             listBoxCategories.DataSource = categories;
             listBoxCategories.DisplayMember = "displayCategory";
         }
+        public void PopulateDictionary()
+        {
+            Term t;
+            string term = comboTerm.Items[comboTerm.SelectedIndex].ToString();
+            for (int i = 0; i < Form1.students.Count; i++)
+            {
+                if (obj.studentInformation.ContainsKey(Form1.students[studentIdx]))
+                {
+                    if (term.Equals("Fall"))
+                    {
+                        t = new Term
+                        {
+                            semester = "Fall",
+                            year = textBoxYear.Text
+                        };
+                        //adding fall classes
+                        obj.studentInformation[Form1.students[studentIdx]] = new Dictionary<Term, BindingList<Class>>();
+                        obj.studentInformation[Form1.students[studentIdx]].Add(t, fallClasses);
 
+                        Console.WriteLine(obj.studentInformation[Form1.students[studentIdx]]);
+                    }
+                
+                    else if (term.Equals("String"))
+                    {
+                        t = new Term
+                        {
+                            semester = "Spring",
+                            year = textBoxYear.Text
+                        };
+                        //adding fall classes
+                        obj.studentInformation[Form1.students[studentIdx]] = new Dictionary<Term, BindingList<Class>>();
+                        obj.studentInformation[Form1.students[studentIdx]].Add(t, fallClasses);
+
+                        Console.WriteLine(obj.studentInformation[Form1.students[studentIdx]]);
+                    }
+
+
+                   
+
+                    //not sure this way it is going to work.
+
+                }
+                else
+                {   
+                    if(term.Equals("Fall"))
+                    {
+                        t = new Term
+                        {
+                            semester = "Fall",
+                            year = textBoxYear.Text
+                        };
+                        //adding fall classes
+                        obj.studentInformation.Add(Form1.students[studentIdx], new Dictionary<Term, BindingList<Class>>());
+                        obj.studentInformation[Form1.students[studentIdx]].Add(t, fallClasses);
+                    }
+                    else if (term.Equals("Spring"))
+                    {
+                        t = new Term
+                        {
+                            semester = "Spring",
+                            year = textBoxYear.Text
+                        };
+                        //adding fall classes
+                        obj.studentInformation.Add(Form1.students[studentIdx], new Dictionary<Term, BindingList<Class>>());
+                        obj.studentInformation[Form1.students[studentIdx]].Add(t, fallClasses);
+                    }
+
+                    
+                }
+            }
+        }
         private void btnAddClass_Click(object sender, EventArgs e)
         {
             Term t;
@@ -120,7 +191,7 @@ namespace StudentRecord
                 listboxSpring_SelectedIndexChanged(sender, e);
                 listboxSpring.Update();
             }
-            
+            PopulateDictionary();//call to dictionary
             WriteRecord();
         }
 
@@ -152,6 +223,7 @@ namespace StudentRecord
                 springClasses.RemoveAt(listboxSpring.SelectedIndex);
             }
             lblClassInfo.Text = "";
+            PopulateDictionary();//call to dictionary
             WriteRecord();
         }
 
